@@ -1,12 +1,44 @@
 # Beginners Python Cheat Sheet
 
+## Contents
+1. Python Syntax
+1. Strings & Console Output
+1. Conditionals & Control Flow
+1. Functions
+1. Lists
+  1. Defining A List
+  1. Accessing Elements
+  1. Modifying Individual Elements
+  1. Adding Elements
+    1. Using `.append()`
+    1. Using `.insert()`
+  1. Removing Elements
+    1. Using `del`
+    1. Using `.remove()`
+  1. Popping Elements
+  1. List Length
+  1. Sorting A List
+    1. Using `.sort()`
+    1. Using `sorted()`
+    1. Using `.reverse()`
+  1. Looping Through A List
+  1. Slicing A List
+  1. Copying A List
+  1. [NULL]
+1. Dictionaries
+1. If Statements
+1. While Loops
+1. Classes
+1. Exceptions
+1. File Import & Export
+
 ## Python Syntax [CC]
 
 ## Strings & Console Output [CC]
 
 ## Conditionals & Control Flow [CC]
 
-## Functions [CC]
+## Functions
 
 ## Lists
 A list stores a series of items in a particular order. Lists allow you to store sets of information in one place, whether you have just a few items or millions of items. Lists are one of Python's most powerful features readily accessible to new programmers, and
@@ -513,13 +545,15 @@ print("Number of aliens created: " + num_aliens)
 
 ## Functions
 
-## Loops
+## If Statements
 
-## Clases
+### While Loops
+
+## Classes
 
 ## Exceptions
 
-## File Input & Output
+## File Import & Export
 
 ## Notes
 ### Styling Your Code
