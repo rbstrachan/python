@@ -16,7 +16,7 @@ they tie together many important concepts in programming.
 Use square brackets to define a list, and use commas to separate individual items in the list. Use plural names for lists, to make your code easier to read. 
 
 ```python
-list = []                                     # empty list
+things = []    # empty list
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 ```
 
@@ -26,10 +26,10 @@ Individual elements in a list are accessed according to their position, called t
 ```python
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
-first_user = users[0]           # returns the first element
-second_user = users[1]          # returns the second element
-newest_user = users[-1]         # returns the last element
-second_newest_user = users[-2]  # returns the penultimate element
+first_user = users[0]             # returns the first element
+second_user = users[1]            # returns the second element
+newest_user = users[-1]           # returns the last element
+second_newest_user = users[-2]    # returns the penultimate element
 ```
 
 ### Modifying Individual Elements
@@ -67,7 +67,7 @@ You can remove elements by their position in a list, or by the value of the item
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
 del users[0]    # deletes first element
-del users[3]    # deletes element at index 3
+del users[3]    # deletes element at index position 3
 del users[-1]   # deletes last element
 ```
 ```python
@@ -90,7 +90,7 @@ print(first_user)
 ```
 
 ### List Length
-The `len()` function return the number of items in a list.
+The `len()` function returns the number of items in a list.
 
 ```python
 num_users = len(users)
@@ -103,15 +103,15 @@ original list unchanged. You can sort the items in a list in alphabetical order,
 also reverse the original order of the list. Keep in mind that lowercase and uppercase letters may affect the sort order.
 
 ```python
-users.sort()              # permanently sorts list in alphabetical order
-users.sort(reverse=True)  # permanently sorts list in reverse alphabetical order
+users.sort()                # permanently sorts list in alphabetical order
+users.sort(reverse=True)    # permanently sorts list in reverse alphabetical order
 ```
 ```python
-user_sort = sorted(users)                         # temporarily sorts list in alphabetical order
-user_sort_reverse = sorted(users, reverse=True)   # temporarily sorts list in reverse alphabetial order
+user_sort = sorted(users)                          # temporarily sorts list in alphabetical order
+user_sort_reverse = sorted(users, reverse=True)    # temporarily sorts list in reverse alphabetial order
 ```
 ```python
-users.reverse()  # reverses order of list
+users.reverse()    # reverses order of list
 ```
 
 ### Looping Through A List
@@ -126,20 +126,20 @@ for user in users:
 ```
 ```python
 for user in users:
-  print("Welcome, " + user + "!")             # prints message after each item in list
+  print("Welcome, " + user + "!")               # prints message after each item in list
 
-print("Welcome, we're glad to see you all.")  # prints message after all items of list are printed
+print("Welcome, we're glad to see you all.")    # prints message after all items of list are printed
 ```
 
 ### Slicing A List
 You can work with any set of elements from a list. A portion of a list is called a slice. To slice a list, start with the index of the first item you want, then add a colon and the index of the last item you want, plus one. If an initial index value is not specified, the slice will be started at the beginning of the list. If a final index value is not specified, slice will end at the end of the list.
 
 ```python
-finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']  # defines list
+finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
-first_three = finishers[:3]                      # returns first three list items
-middle_three = finishers[1:4]                    # returns list items in index positions 1, 2 and 3
-last_three = finishers[-3:]                      # returns last three list items
+first_three = finishers[:3]      # returns first three list items
+middle_three = finishers[1:4]    # returns list items in index positions 1, 2 and 3
+last_three = finishers[-3:]      # returns last three list items
 ```
 
 ### Copying A List
@@ -148,7 +148,7 @@ To copy a list, you must make a slice that starts with the first item and ends w
 ```python
 finishers = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
-finishers_copy = finishers[:]   # creates a seperate copy of the list
+finishers_copy = finishers[:]    # creates a seperate copy of the list
 ```
 
 ### List Comprehensions
@@ -156,29 +156,51 @@ You can use a loop to generate a list based on a range of numbers or on another 
 
 ```python
 # USING FOR LOOP METHOD
-squares = []              # defines list
+squares = []
 
-for x in range(1,11):     # iterates from 1 to 10
+for x in range(1,11):       # iterates from 1 to 10
   square = x**2
-  squares.append(square)  # appends the value of 'square' onto list
+  squares.append(square)    # appends the value of 'square' onto list each iteration
 
 
 # USING LIST COMPREHENSION METHOD
-squares = [x**2 for x in range(1,11)]  # generates a list of the first ten square numbers
+squares = [x**2 for x in range(1,11)]    # generates a list of the first ten square numbers
 ```
 ```python
 # USING FOR LOOP METHOD
-names = ['kai', 'abe', 'ada', 'gus', 'zoe']  # defines list
+names = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
-upper_names = []                             # defines list
+upper_names = []
 for name in names:
-  upper_names.append(name.upper())           # appends items converted to upper case from list 'names'
+  upper_names.append(name.upper())    # appends items converted to upper case from list 'names'
 
 
 # USING LIST COMPREHENSION METHOD
 names = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
-upper_names = [name.upper() for name in names]  # generates list of items converted to uppercase from list 'names'
+upper_names = [name.upper() for name in names]    # generates list of items converted to uppercase from list 'names'
+```
+
+## Tuples
+A tuple is like a list, except you can't change the values in a tuple once it's defined. Tuples are good for storing information that doesn't change for the entirety of the program. Tuples are designated by parenthesis instead of square brackets. Information in tuples can be overridden completely, however, individual elements cannot be changed.
+
+### Defining A Tuple
+```python
+dimensions = (800,600)
+```
+
+### Looping Through A Tuple
+```python
+for dimension in dimensions:
+  print(dimension)
+```
+
+### Overwriting A Tuple
+```python
+dimensions = (800,600)
+print(dimensions)
+
+dimensions = (1200,900)
 ```
 
 ## Dictionaries
