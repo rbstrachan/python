@@ -16,7 +16,7 @@ they tie together many important concepts in programming.
 Use square brackets to define a list, and use commas to separate individual items in the list. Use plural names for lists, to make your code easier to read. 
 
 ```python
-things = []    # empty list
+things = []
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 ```
 
@@ -45,6 +45,7 @@ users[-2] = 'ronald'
 ### Adding Elements
 You can add elements to the end of a list, or you can insert them into a specific index position.
 
+##### Adding elements to the end of a list using `.append()`
 ```python
 users = ['ron']
 
@@ -53,6 +54,8 @@ users.append('val')
 users.append('bob')
 users.append('mia')
 ```
+
+##### Inserting elements at particular positions using `.insert()`
 ```python
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
@@ -63,6 +66,7 @@ users.insert(3, 'bea')
 ### Removing Elements
 You can remove elements by their position in a list, or by the value of the item. If you remove an item by its value, Python removes only the first item that has that value.
 
+##### Deleting elements by index position using `del`
 ```python
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
@@ -70,6 +74,8 @@ del users[0]    # deletes first element
 del users[3]    # deletes element at index position 3
 del users[-1]   # deletes last element
 ```
+
+##### Removing elements by value using `.remove()`
 ```python
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
@@ -82,10 +88,10 @@ If you want to work with an element that you're removing from the list, you can 
 ```python
 users = ['val', 'bob', 'mia', 'ron', 'ned']
 
-most_recent_user = users.pop()  # returns last element of list
+most_recent_user = users.pop()    # returns last element of list
 print(most_recent_user)
 
-first_user = users.pop(0)       # returns first list element
+first_user = users.pop(0)         # returns first list element
 print(first_user)
 ```
 
@@ -102,14 +108,19 @@ The `sort()` method changes the order of a list permanently. The `sorted()` func
 original list unchanged. You can sort the items in a list in alphabetical order, or reverse alphabetical order. You can
 also reverse the original order of the list. Keep in mind that lowercase and uppercase letters may affect the sort order.
 
+##### Permanently sorting a list using `.sort()`
 ```python
 users.sort()                # permanently sorts list in alphabetical order
 users.sort(reverse=True)    # permanently sorts list in reverse alphabetical order
 ```
+
+##### Temporarily sorting a list using `sorted()`
 ```python
 user_sort = sorted(users)                          # temporarily sorts list in alphabetical order
 user_sort_reverse = sorted(users, reverse=True)    # temporarily sorts list in reverse alphabetial order
 ```
+
+##### Reversing the order of a list using `.reverse()`
 ```python
 users.reverse()    # reverses order of list
 ```
@@ -154,30 +165,33 @@ finishers_copy = finishers[:]    # creates a seperate copy of the list
 ### List Comprehensions
 You can use a loop to generate a list based on a range of numbers or on another list. This is a common operation, so Python offers a more efficient way to do it. List comprehensions may look complicated at first; if so, use the for loop approach until you're ready to start using comprehensions. To write a comprehension, define an expression for the values you want to store in the list. Then write a for loop to generate input values needed to make the list.
 
+##### Generating a list of square numbers
+###### Using `for` loop method
 ```python
-# USING FOR LOOP METHOD
 squares = []
 
 for x in range(1,11):       # iterates from 1 to 10
   square = x**2
   squares.append(square)    # appends the value of 'square' onto list each iteration
+```
 
-
-# USING LIST COMPREHENSION METHOD
+###### Using list comprehension method
+```
 squares = [x**2 for x in range(1,11)]    # generates a list of the first ten square numbers
 ```
+
+##### Converting a list to uppercase
+###### Using `for` loop method
 ```python
-# USING FOR LOOP METHOD
 names = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
 upper_names = []
 for name in names:
   upper_names.append(name.upper())    # appends items converted to upper case from list 'names'
+```
 
-
-# USING LIST COMPREHENSION METHOD
-names = ['kai', 'abe', 'ada', 'gus', 'zoe']
-
+###### Using list comprehension method
+```
 upper_names = [name.upper() for name in names]    # generates list of items converted to uppercase from list 'names'
 ```
 
@@ -204,6 +218,56 @@ dimensions = (1200,900)
 ```
 
 ## Dictionaries
+Python's dictionaries allow you to connect pieces of related information. Each piece of information in a dictionary is stored as a key-value pair. When you provide a key, Python returns the value associated with that key. You can loop through all the key-value
+pairs, all the keys, or all the values.
+
+### Defining A Dictionary
+Use curly braces to define a dictionary. Use colons to connect keys and values, and use commas to separate individual key-value pairs.
+
+```python
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'purple', 'points': 3}
+alien_X = {'color': 'invisible', 'points': 'unknown'}
+```
+
+### Accessing Values
+To access the value associated with an individual key, give the name of the dictionary and then place the key in a set of square brackets. If the key you're asking for is not in the dictionary, an error will occur.  You can also use the `get()` method, which returns `None` instead of an error if the key doesn't exist. You can also specify a default value to use if the key is not in the
+dictionary.
+
+```python
+alien_0 = {'color': 'green', 'points': 5}
+
+print(alien_0['color'])
+print(alien_0['points'])
+```
+```python
+alien_0 = {'color': 'green'}
+
+alien_color = alien_0.get('color')
+alien_points = alien_0.get('points', 0)
+
+print(alien_color)
+print(alien_points)
+```
+
+### Adding New Key-Pair Values
+You can store as many key-pair values as you want in a dictionary, until the computer runs out of memory. To add a new key-value pair to an exisiting dictionary, give the name of the dictionary and the new key in square brackets and set it equal to the new value. This also allows you to start with an empty dictionary and add key-value pairs as they become relevant.
+
+#### Adding key-value pairs
+```python
+alien_0 = {'color': 'green', 'points': 5}
+
+alien_0['x'] = 0
+alien_0['y'] = 25
+alien_0['speed'] = 1.5
+```
+##### Adding key-value pairs to an empty dictionary
+```python
+alien_0 = {}
+
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+```
 
 ## Functions
 
@@ -217,7 +281,7 @@ dimensions = (1200,900)
 
 ## Notes
 ### Styling Your Code
-Sytling your code helps with readability. This is especially important in Python. To keep your code neat and tidy, you should;
+Styling your code helps with readability. This is especially important in Python. To keep your code neat and tidy, you should;
 1. Use four spaces per indentation
 1. Keep your lines below 80 characters
 1. Use single blank lines to visually seperate individual groups of code
