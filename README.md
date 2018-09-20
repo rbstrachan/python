@@ -1,66 +1,66 @@
 # Beginners Python Cheat Sheet
 
 ## Contents
-1. Python Syntax
-1. Strings & Console Output
-1. Conditionals & Control Flow
-1. Functions
-1. [Lists](#lists)
-  1. [Defining A List](#defining-a-list)
-  1. [Accessing Elements](#Accessing-Elements)
-  1. [Modifying Individual Elements](#modifying-individual-elements)
-  1. [Adding Elements](#adding-elements)
-    1. [Using `.append()`](#adding-elements-to-the-end-of-a-list-using--.append()-)
-    1. [Using `.insert()`](#inserting-elements-at-particular-positions-using--.insert()-)
-  1. Removing Elements
-    1. Using `del`
-    1. Using `.remove()`
-  1. Popping Elements
-  1. List Length
-  1. Sorting A List
-    1. Using `.sort()`
-    1. Using `sorted()`
-    1. Using `.reverse()`
-  1. Looping Through A List
-  1. Slicing A List
-  1. Copying A List
-  1. List Comprehension
-    1. Generating A List Of Square Numbers
-      1. Using For Loop Method
-      1. Using List Comprehension Method
-    1. Converting A List to Uppercase
-      1. Using For Loop Methos
-      1. Using List Comprehension Method
-1. Tuples
-  1. Defining A Tuple
-  1. Looping Through A Tuple
-  1. Overwriting A Tuple
-1. Dictionaries
-  1. Defining A Dictionary
-  1. Accessing Values
-    1. Directly
-    1. Using `.get()`
-  1. Adding New Key-Pair Values
-  1. Modifying Values
-  1. Removing Key-Pair Values
-  1. Looping Through A Dictionary
-    1. Looping Through All Key-Value Pairs
-    1. Looping Through All Keys
-    1. Looping Through All Values
-    1. Looping Through All Keys (In Order)
-  1. Dictionary Length
-  1. Nesting Dictionaries Inside Lists
-    1. Using `.append()
-    1. Directly`
-  1. Nesting Lists Inside Dictionaries
-  1. Nesting Dictionaries Inside Dictionaries
-  1. Using OrderedDict
-  1. Generating Dictionaries Using For Loops
-1. If Statements
-1. While Loops
-1. Classes
-1. Exceptions
-1. File Import & Export
+- Python Syntax
+- Strings & Console Output
+- Conditionals & Control Flow
+- Functions
+- [Lists](#lists)
+  - [Defining A List](#defining-a-list)
+  - [Accessing Elements](#Accessing-Elements)
+  - [Modifying Individual Elements](#modifying-individual-elements)
+  - [Adding Elements](#adding-elements)
+    - [Using `.append()`](#adding-elements-to-the-end-of-a-list-using-append)
+    - [Using `.insert()`](#inserting-elements-at-particular-positions-using-insert)
+  - [Removing Elements](#removing-elements)
+    - Using `del`
+    - Using `.remove()`
+  - Popping Elements
+  - List Length
+  - Sorting A List
+    - Using `.sort()`
+    - Using `sorted()`
+    - Using `.reverse()`
+  - Looping Through A List
+  - Slicing A List
+  - Copying A List
+  - List Comprehension
+    - Generating A List Of Square Numbers
+      - Using For Loop Method
+      - Using List Comprehension Method
+    - Converting A List to Uppercase
+      - Using For Loop Methos
+      - Using List Comprehension Method
+- Tuples
+  - Defining A Tuple
+  - Looping Through A Tuple
+  - Overwriting A Tuple
+- Dictionaries
+  - Defining A Dictionary
+  - Accessing Values
+    - Directly
+    - Using `.get()`
+  - Adding New Key-Pair Values
+  - Modifying Values
+  - Removing Key-Pair Values
+  - Looping Through A Dictionary
+    - Looping Through All Key-Value Pairs
+    - Looping Through All Keys
+    - Looping Through All Values
+    - Looping Through All Keys (In Order)
+  - Dictionary Length
+  - Nesting Dictionaries Inside Lists
+    - Using `.append()
+    - Directly`
+  - Nesting Lists Inside Dictionaries
+  - Nesting Dictionaries Inside Dictionaries
+  - Using OrderedDict
+  - Generating Dictionaries Using For Loops
+- If Statements
+- While Loops
+- Classes
+- Exceptions
+- File Import & Export
 
 ## Python Syntax [CC]
 
