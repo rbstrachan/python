@@ -1,4 +1,4 @@
-# Beginners Python Cheat Sheet
+# [Beginners Python Crash Course - Cheat Sheet](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
 
 ## Contents
 - Python Syntax
@@ -66,7 +66,96 @@
 
 ## Strings & Console Output [CC]
 
-## Conditionals & Control Flow [CC]
+## Conditional Tests
+A conditional test is an expression that can be evaluated as True or False. Python uses the values True and False to decide whether the code in an `if` statement or `while` loop should be executed.
+
+### Checking For Equality
+##### String comparisons
+```python
+>>> car = "bmw"
+>>> car == "bmw"
+True
+```
+```python
+>>> car = "audi"
+>>> car == "bmw"
+False
+```
+
+##### Numerical comparison
+```python
+>>> age = 18
+>>> age == 18
+True
+```
+
+### Checking For Inequality
+##### String comparison
+```python
+>>> topping = "chicken"
+>>> topping != "sweetcorn"
+True
+```
+
+##### Numberical comparison
+```python
+>>> age = 18
+>>> age != 18
+False
+```
+
+### Comparison Operators
+```python
+>>> age = 19
+>>> age < 21
+True
+>>> age <= 21
+True
+>>> age > 21
+False
+>>> age >= 21
+False
+```
+
+### Checking Multiple Conditions
+You can check multiple conditions at the same time. The `and` operator returns `True` if all the conditions listed are `True`. The `or` operator returns `True` if any condition is `True`.
+
+##### Using `and` to check multiple conditions
+```python
+>>> age_0 = 22
+>>> age_1 = 18
+>>> age_0 >= 21 and age_1 >= 21
+False
+>>> age_1 = 23
+>>> age_0 >= 21 and age_1 >= 21
+True
+```
+
+##### Using `or` to check multiple conditions
+```python
+>>> age_0 = 22
+>>> age_1 = 18
+>>> age_0 >= 21 or age_1 >= 21
+True
+>>> age_0 = 18
+>>> age_0 >= 21 or age_1 >= 21
+False
+```
+
+### Boolean Values
+A boolean value is either `True` or `False`. Variables with boolean values are often used to keep track of certain conditions within a program.
+
+```python
+game_active = True
+can_edit = False
+```
+
+### Ignoring Case
+```python
+>>> car = "Audi"
+>>> car.lower() == "audi"
+True
+```
 
 ## Functions
 
@@ -574,8 +663,135 @@ print("Number of aliens created: " + num_aliens)
 ```
 
 ## If Statements
+`If` statements allow you to examine the current state of a program and respond apporopriately to that state. You can write a simple `if` statement that checks one condition, or you can create a complex series of if statements that identify the exact conditions you are looking for. Several kinds of if statements exist. Your choice of which to use depends on the number of conditions you need to test. You can have as many elif blocks as you need, and the else block is always optional.
+
+##### If Statement
+```python
+age = 19
+
+if age >= 18:
+  print("You are old enough to vote.")
+```
+
+##### If-Else Statement
+```python
+age = 19
+
+if age >= 18:
+  print("You are old enough to vote.")
+else:
+  print("You can't vote yet.")
+```
+
+##### If-Elif-Else Chain
+```python
+age = 19
+
+if age < 5:
+  price = 0
+elif age < 18:
+  price = 5
+else:
+  price = 10
+  
+print("Your cost is £" + str(price) + ".")
+```
 
 ## While Loops
+A while loop repeats a block of code as long as a condition is `True`.
+
+##### Using a While Loop to count
+```python
+current_number = 1
+
+while current_number <= 5:
+  print(current_number)
+  current_number += 1
+```
+
+##### Letting the user choose when to quit
+```python
+prompt = "\nTell me something, and I'll "
+prompt += "repeat it back to you."
+prompt += "\nEnter 'quit' to end the program. "
+
+message = ""
+while message != "quit":
+  message = input(prompt)
+  if message != "quit":
+    print(message)
+```
+
+##### Using a flag
+```python
+prompt = "\nTell me something, and I'll "
+prompt += "repeat it back to you."
+prompt += "\nEnter 'quit' to end the program. "
+
+active = True
+while active:
+  message = input(prompt)
+  if message == "quit":
+    active = False
+  else:
+    print(message)
+```
+
+##### Using `break` to exit a loop
+```python
+prompt = "\nWhat cities have you visited?"
+prompt += "\nEnter 'quit' when you're done. "
+
+while True:
+  city = imput(prompt)
+  if city == "quit":
+    break
+  else:
+    print("I've been to " + city + "!")
+```
+
+##### Using `continue` in a loop
+```python
+banned_users = ['eve', 'fred', 'gary', 'helen']
+
+prompt = "\nAdd a player to your team."
+prompt += "\nEnter 'quit' when you're done. "
+
+players = []
+while True:
+  player = input(prompt)
+  if player == 'quit':
+    break
+  elif player in banned_users:
+    print(player + " is banned!")
+    continue
+  else:
+    players.append(player)
+```
+
+### Avoiding Infinite Loops
+Every `while` loop needs a way to stop running so it doesn't continue to run forever. If there is now way for the condition to become `False`, the loop with never stop running.
+
+##### Example of an infinite loop 
+```python
+while True:
+  name = input("\nWho are you? ")
+  print("Nice to meet you, " + name + "!")
+```
+
+### Removing All Instances of A Value From A List
+The `.remove()` method removes a specific value from a list, however it only removes the first instance of the value provided. You can use a while loop to remove all instances of a particular value.
+
+```python
+pets = ['dog', 'cat', 'dog', 'fish', 'cat', 'rabbit', 'cat']
+
+print(pets)
+
+while 'cat' in pets:
+  pets.remove('cat')
+
+print(pets)
+```
 
 ## Classes
 
