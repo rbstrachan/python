@@ -24,15 +24,20 @@ users = ['val', 'bob', 'mia', 'ron', 'ned']
 Individual elements in a list are accessed according to their position, called the index. The index of the first element is 0, the index of the second element is 1, and so forth. Negative indices refer to items at the end of the list. To get a particular element, write the name of the list and then the index of the element in square brackets.
 
 ```python
-first_user = users[0]    # returns the first element
-second_user = users[1]   # returns the second element
-newest_user = users[-1]  # returns the last element
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
+first_user = users[0]           # returns the first element
+second_user = users[1]          # returns the second element
+newest_user = users[-1]         # returns the last element
+second_newest_user = users[-2]  # returns the penultimate element
 ```
 
 ### Modifying Individual Elements
 Once you've defined a list, you can change individual elements in the list. You do this by referring to the index of the item you want to modify.
 
 ```python
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
 users[0] = 'valerie'
 users[-2] = 'ronald'
 ```
@@ -41,12 +46,16 @@ users[-2] = 'ronald'
 You can add elements to the end of a list, or you can insert them into a specific index position.
 
 ```python
+users = ['ron']
+
 users.append('amy')
 users.append('val')
 users.append('bob')
 users.append('mia')
 ```
 ```python
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
 users.insert(0, 'joe')  
 users.insert(3, 'bea')
 ```
@@ -55,11 +64,15 @@ users.insert(3, 'bea')
 You can remove elements by their position in a list, or by the value of the item. If you remove an item by its value, Python removes only the first item that has that value.
 
 ```python
-del users[0]    # deletes element at index 0
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
+del users[0]    # deletes first element
 del users[3]    # deletes element at index 3
-del users[-1]   # deletes last element in list
+del users[-1]   # deletes last element
 ```
 ```python
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
 users.remove('mia')   # removes lowest index list item with value 'mia'
 ```
 
@@ -67,10 +80,12 @@ users.remove('mia')   # removes lowest index list item with value 'mia'
 If you want to work with an element that you're removing from the list, you can "pop" the element. If you think of the list as a stack of items, `pop()` takes an item off the top of the stack. By default `pop()` returns the last element in the list, but you can also pop elements from any position in the list.
 
 ```python
+users = ['val', 'bob', 'mia', 'ron', 'ned']
+
 most_recent_user = users.pop()  # returns last element of list
 print(most_recent_user)
 
-first_user = users.pop(0)       # returns list element with index 0
+first_user = users.pop(0)       # returns first list element
 print(first_user)
 ```
 
@@ -83,7 +98,7 @@ print("We have " + str(num_users) + " users.")
 ```
 
 ### Sorting A List
-The sort() method changes the order of a list permanently. The sorted() function returns a copy of the list, leaving the
+The `sort()` method changes the order of a list permanently. The `sorted()` function returns a copy of the list, leaving the
 original list unchanged. You can sort the items in a list in alphabetical order, or reverse alphabetical order. You can
 also reverse the original order of the list. Keep in mind that lowercase and uppercase letters may affect the sort order.
 
@@ -146,8 +161,8 @@ squares = []              # defines list
 for x in range(1,11):     # iterates from 1 to 10
   square = x**2
   squares.append(square)  # appends the value of 'square' onto list
-```
-```python
+
+
 # USING LIST COMPREHENSION METHOD
 squares = [x**2 for x in range(1,11)]  # generates a list of the first ten square numbers
 ```
@@ -158,9 +173,9 @@ names = ['kai', 'abe', 'ada', 'gus', 'zoe']  # defines list
 upper_names = []                             # defines list
 for name in names:
   upper_names.append(name.upper())           # appends items converted to upper case from list 'names'
-```
-```python
-# USING COMPREHENSION METHOD
+
+
+# USING LIST COMPREHENSION METHOD
 names = ['kai', 'abe', 'ada', 'gus', 'zoe']
 
 upper_names = [name.upper() for name in names]  # generates list of items converted to uppercase from list 'names'
