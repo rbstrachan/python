@@ -13,54 +13,54 @@
     - [Using `.append()`](#adding-elements-to-the-end-of-a-list-using-append)
     - [Using `.insert()`](#inserting-elements-at-particular-positions-using-insert)
   - [Removing Elements](#removing-elements)
-    - Using `del`
-    - Using `.remove()`
-  - Popping Elements
-  - List Length
-  - Sorting A List
-    - Using `.sort()`
-    - Using `sorted()`
-    - Using `.reverse()`
-  - Looping Through A List
-  - Slicing A List
-  - Copying A List
-  - List Comprehension
-    - Generating A List Of Square Numbers
-      - Using For Loop Method
-      - Using List Comprehension Method
-    - Converting A List to Uppercase
-      - Using For Loop Methos
-      - Using List Comprehension Method
-- Tuples
-  - Defining A Tuple
-  - Looping Through A Tuple
-  - Overwriting A Tuple
-- Dictionaries
-  - Defining A Dictionary
-  - Accessing Values
-    - Directly
-    - Using `.get()`
-  - Adding New Key-Pair Values
-  - Modifying Values
-  - Removing Key-Pair Values
-  - Looping Through A Dictionary
-    - Looping Through All Key-Value Pairs
-    - Looping Through All Keys
-    - Looping Through All Values
-    - Looping Through All Keys (In Order)
-  - Dictionary Length
-  - Nesting Dictionaries Inside Lists
-    - Using `.append()
-    - Directly`
-  - Nesting Lists Inside Dictionaries
-  - Nesting Dictionaries Inside Dictionaries
-  - Using OrderedDict
-  - Generating Dictionaries Using For Loops
-- If Statements
-- While Loops
-- Classes
-- Exceptions
-- File Import & Export
+    - [Using `del`](#deleting-elements-by-index-position-using-del)
+    - [Using `.remove()`](#removing-elements-by-value-using-remove)
+  - [Popping Elements](#popping-elements)
+  - [List Length](#list-length)
+  - [Sorting A List](#sorting-a-list)
+    - [Using `.sort()`](#permanently-sorting-a-list-using-sort)
+    - [Using `sorted()`](#temporarily-sorting-a-list-using-sorted)
+    - [Using `.reverse()`](#reversing-the-order-of-a-list-using-reverse)
+  - [Looping Through A List](#looping-through-a-list)
+  - [Slicing A List](#slicing-a-list)
+  - [Copying A List](#copying-a-list)
+  - [List Comprehension](#list-comprehensions)
+    - [Generating A List Of Square Numbers](#generating-a-list-of-square-numbers)
+      - [Using For Loop Method](#using-for-loop-method)
+      - [Using List Comprehension Method](#using-list-comprehension-method)
+    - [Converting A List to Uppercase](#converting-a-list-to-uppercase)
+      - [Using For Loop Method](#using-for-loop-method-1)
+      - [Using List Comprehension Method](#using-list-comprehension-method-1)
+- [Tuples](#tuples)
+  - [Defining A Tuple](#defining-a-tuple)
+  - [Looping Through A Tuple](#looping-through-a-tuple)
+  - [Overwriting A Tuple](#overwriting-a-tuple)
+- [Dictionaries](#dictionaries)
+  - [Defining A Dictionary](#defining-a-dictionary)
+  - [Accessing Values](#accessing-values)
+    - [Directly](#accessing-key-values-directly)
+    - [Using `.get()`](#accessing-key-values-using-get)
+  - [Adding New Key-Pair Values](#adding-new-key-pair-values)
+  - [Modifying Values](#modifying-values)
+  - [Removing Key-Pair Values](#removing-key-value-pairs)
+  - [Looping Through A Dictionary](#looping-through-a-dictionary)
+    - [Looping Through All Key-Value Pairs](#looping-through-all-key-value-pairs)
+    - [Looping Through All Keys](#looping-through-all-keys)
+    - [Looping Through All Values](#looping-through-all-values)
+    - [Looping Through All Keys (In Order)](#looping-through-all-the-keys-in-order)
+  - [Dictionary Length](#dictionary-length)
+  - [Nesting Dictionaries Inside Lists](#nesting-dictionaries-inside-lists)
+    - [Using `.append()`](#nesting-dictionaries-using-append)
+    - [Directly](#nesting-dictionaries-directly)
+  - [Nesting Lists Inside Dictionaries](#nesting-lists-inside-dictionaries)
+  - [Nesting Dictionaries Inside Dictionaries](#nesting-dictionaries-inside-dictionaries)
+  - [Using OrderedDict](#using-ordereddict)
+  - [Generating Dictionaries Using For Loops](#generating-dictionaries-using-for-loops)
+- [If Statements](#if-statements)
+- [While Loops](#while-loops)
+- [Classes](#classes)
+- [Exceptions](#exceptions)
+- [File Import & Export](#file-import--export)
 
 ## Python Syntax [CC]
 
