@@ -67,7 +67,7 @@
 ## Strings & Console Output [CC]
 
 ## Conditional Tests
-A conditional test is an expression that can be evaluated as True or False. Python uses the values True and False to decide whether the code in an `if` statement or `while` loop should be executed.
+A conditional test is an expression that can be evaluated as `True` or `False`. Python uses the values `True` and `False` to decide whether the code in an `if` statement or `while` loop should be executed.
 
 ### Checking For Equality
 ##### String comparisons
@@ -665,7 +665,7 @@ print("Number of aliens created: " + num_aliens)
 ## If Statements
 `If` statements allow you to examine the current state of a program and respond apporopriately to that state. You can write a simple `if` statement that checks one condition, or you can create a complex series of if statements that identify the exact conditions you are looking for. Several kinds of if statements exist. Your choice of which to use depends on the number of conditions you need to test. You can have as many elif blocks as you need, and the else block is always optional.
 
-##### If Statement
+### If Statement
 ```python
 age = 19
 
@@ -673,7 +673,7 @@ if age >= 18:
   print("You are old enough to vote.")
 ```
 
-##### If-Else Statement
+### If-Else Statement
 ```python
 age = 19
 
@@ -683,7 +683,7 @@ else:
   print("You can't vote yet.")
 ```
 
-##### If-Elif-Else Chain
+### If-Elif-Else Chain
 ```python
 age = 19
 
@@ -700,7 +700,7 @@ print("Your cost is £" + str(price) + ".")
 ## While Loops
 A while loop repeats a block of code as long as a condition is `True`.
 
-##### Using a While Loop to count
+### Using A While Loop To Count
 ```python
 current_number = 1
 
@@ -709,7 +709,7 @@ while current_number <= 5:
   current_number += 1
 ```
 
-##### Letting the user choose when to quit
+### Letting The User Choose when To Quit
 ```python
 prompt = "\nTell me something, and I'll "
 prompt += "repeat it back to you."
@@ -722,7 +722,7 @@ while message != "quit":
     print(message)
 ```
 
-##### Using a flag
+### Using A Flag
 ```python
 prompt = "\nTell me something, and I'll "
 prompt += "repeat it back to you."
@@ -737,7 +737,7 @@ while active:
     print(message)
 ```
 
-##### Using `break` to exit a loop
+### Using `break` To Exit A Loop
 ```python
 prompt = "\nWhat cities have you visited?"
 prompt += "\nEnter 'quit' when you're done. "
@@ -750,7 +750,7 @@ while True:
     print("I've been to " + city + "!")
 ```
 
-##### Using `continue` in a loop
+### Using `continue` In A Loop
 ```python
 banned_users = ['eve', 'fred', 'gary', 'helen']
 
@@ -772,7 +772,7 @@ while True:
 ### Avoiding Infinite Loops
 Every `while` loop needs a way to stop running so it doesn't continue to run forever. If there is now way for the condition to become `False`, the loop with never stop running.
 
-##### Example of an infinite loop 
+### Example Of An Infinite Loop 
 ```python
 while True:
   name = input("\nWho are you? ")
