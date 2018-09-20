@@ -234,17 +234,20 @@ alien_X = {'color': 'invisible', 'points': 'unknown'}
 To access the value associated with an individual key, give the name of the dictionary and then place the key in a set of square brackets. If the key you're asking for is not in the dictionary, an error will occur.  You can also use the `.get()` method, which returns `None` instead of an error if the key doesn't exist. You can also specify a default value to use if the key is not in the
 dictionary.
 
+##### Accessing key values directly
 ```python
 alien_0 = {'color': 'green', 'points': 5}
 
 print(alien_0['color'])
 print(alien_0['points'])
 ```
+
+##### Accessing key values using `.get()`
 ```python
 alien_0 = {'color': 'green'}
 
 alien_color = alien_0.get('color')
-alien_points = alien_0.get('points', 0)
+alien_points = alien_0.get('points', 0)    # The second argument of the `.get()` function is the default value.
 
 print(alien_color)
 print(alien_points)
@@ -396,7 +399,7 @@ for user_dict in users:
   print("\n")
 ```
 
-##### Nesting dictionaries using directly
+##### Nesting dictionaries directly
 ```python
 # Define a list of users, where each user is represented by a dictionary.
 users = [
@@ -464,7 +467,7 @@ for username, user_dict in users.items():
   print("\tLocation: " + location.title())
 ```
 
-### Using An OrderedDict
+### Using OrderedDict
 Standard Python dictionaries don't keep track of the order in which keys and values are added; they only preserve the
 association between each key and its value. If you want to preserve the order in which keys and values are added, use
 an OrderedDict.
