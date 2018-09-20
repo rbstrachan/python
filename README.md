@@ -231,7 +231,7 @@ alien_X = {'color': 'invisible', 'points': 'unknown'}
 ```
 
 ### Accessing Values
-To access the value associated with an individual key, give the name of the dictionary and then place the key in a set of square brackets. If the key you're asking for is not in the dictionary, an error will occur.  You can also use the `get()` method, which returns `None` instead of an error if the key doesn't exist. You can also specify a default value to use if the key is not in the
+To access the value associated with an individual key, give the name of the dictionary and then place the key in a set of square brackets. If the key you're asking for is not in the dictionary, an error will occur.  You can also use the `.get()` method, which returns `None` instead of an error if the key doesn't exist. You can also specify a default value to use if the key is not in the
 dictionary.
 
 ```python
@@ -253,7 +253,6 @@ print(alien_points)
 ### Adding New Key-Pair Values
 You can store as many key-pair values as you want in a dictionary, until the computer runs out of memory. To add a new key-value pair to an exisiting dictionary, give the name of the dictionary and the new key in square brackets and set it equal to the new value. This also allows you to start with an empty dictionary and add key-value pairs as they become relevant.
 
-#### Adding key-value pairs
 ```python
 alien_0 = {'color': 'green', 'points': 5}
 
@@ -261,12 +260,252 @@ alien_0['x'] = 0
 alien_0['y'] = 25
 alien_0['speed'] = 1.5
 ```
-##### Adding key-value pairs to an empty dictionary
 ```python
 alien_0 = {}
 
 alien_0['color'] = 'green'
 alien_0['points'] = 5
+```
+
+### Modifying Values
+You can modify the value associated with any key in a dictionary. To do so, give the name of the dictionary and anclose the key in square brackets, then preovide the new value for that key.
+
+```python
+alien_0 = {'color': 'green', 'points': 5}
+
+alien_0['color'] = 'yellow'
+alien_0['points'] = 10
+```
+
+### Removing Key-Value Pairs
+You can remove any key-value pair you want from a dictionary. To do so, use the `del` keyword and the dictionary name, followed by the key in square brackets. This will delete the key and its associated value.
+
+```python
+alien_0 = {'color': 'green', 'points': 5}
+
+del alien_0['color']
+del alien_0['points']
+```
+
+### Looping Through A Dictionary
+You can loop through a dictionary in three ways, you can loop through all the key-value pairs, all the keys, or all the values. A dictionary only tracks the connections between keys and values; it doesn't track the order of items in the dictionary. If you want to process the information in order, you can sort the keys in your loop.
+
+##### Looping through all key-value pairs
+```python
+# Store people's favorite languages.
+fav_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+
+# Show each person's favorite language.
+for name, language in fav_languages.items():
+  print(name + ": " + language)
+```
+
+##### Looping through all keys
+```python
+# Store people's favorite languages.
+fav_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+
+# Show everyone who's taken the survey.
+for name in fav_languages.keys():
+  print(name)
+```
+
+##### Looping through all values
+```python
+# Store people's favorite languages.
+fav_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+
+# Show all the languages that have been chosen.
+for language in fav_languages.values():
+  print(language)
+```
+
+##### Looping through all the keys in order
+```python
+# Store people's favorite languages.
+fav_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+
+# Show each person's favorite language, in order by the person's name.
+for name in sorted(fav_languages.keys()):
+  print(name + ": " + language)
+```
+
+### Dictionary Length
+You can find the number of key-value pairs in a dictionary using the `len()` function.
+
+```python
+# Store people's favorite languages.
+fav_languages = {
+  'jen': 'python',
+  'sarah': 'c',
+  'edward': 'ruby',
+  'phil': 'python',
+}
+
+num_responses = len(fav_languages)
+```
+
+### Nesting Dictionaries Inside Lists
+It's sometimes useful to store a set of dictionaries in a list; this is called nesting.
+
+##### Nesting dictionaries using `.append()`
+```python
+# Start with an empty list.
+users = []
+
+# Make a new user, and add them to the list.
+new_user = {
+  'last': 'fermi',
+  'first': 'enrico',
+  'username': 'efermi',
+}
+users.append(new_user)
+
+# Make another new user, and add them as well.
+new_user = {
+  'last': 'curie',
+  'first': 'marie',
+  'username': 'mcurie',
+}
+users.append(new_user)
+
+# Show all information about each user.
+for user_dict in users:
+  for k, v in user_dict.items():
+  print(k + ": " + v)
+  print("\n")
+```
+
+##### Nesting dictionaries using directly
+```python
+# Define a list of users, where each user is represented by a dictionary.
+users = [
+  {
+    'last': 'fermi',
+    'first': 'enrico',
+    'username': 'efermi',
+  },
+  {
+    'last': 'curie',
+    'first': 'marie',
+    'username': 'mcurie',
+  },
+]
+
+# Show all information about each user.
+for user_dict in users:
+ for k, v in user_dict.items():
+ print(k + ": " + v)
+ print("\n")
+```
+
+### Nesting Lists Inside Dictionaries
+Storing a list inside a dictionary allowys you to associate more than one value with each key.
+
+```python
+# Store multiple languages for each person.
+fav_languages = {
+  'jen': ['python', 'ruby'],
+  'sarah': ['c'],
+  'edward': ['ruby', 'go'],
+  'phil': ['python', 'haskell'],
+}
+# Show all responses for each person.
+for name, langs in fav_languages.items():
+  print(name + ": ")
+  for lang in langs:
+  print("- " + lang)
+```
+
+### Nesting Dictionaries Inside Dictionaries
+You can store a dictionary inside another dictionary. In this case each value associates with a ket is itself a dictionary.
+
+```python
+users = {
+    'aeinstein': {
+    'first': 'albert',
+    'last': 'einstein',
+    'location': 'princeton',
+  },
+    'mcurie': {
+    'first': 'marie',
+    'last': 'curie',
+    'location': 'paris',
+  },
+}
+
+for username, user_dict in users.items():
+  print("\nUsername: " + username)
+  full_name = user_dict['first'] + " "
+  full_name += user_dict['last']
+  location = user_dict['location']
+ 
+  print("\tFull name: " + full_name.title())
+  print("\tLocation: " + location.title())
+```
+
+### Using An OrderedDict
+Standard Python dictionaries don't keep track of the order in which keys and values are added; they only preserve the
+association between each key and its value. If you want to preserve the order in which keys and values are added, use
+an OrderedDict.
+
+```python
+from collections import OrderedDict
+
+# Store each person's languages, keeping track of who respoded first.
+fav_languages = OrderedDict()
+
+fav_languages['jen'] = ['python', 'ruby']
+fav_languages['sarah'] = ['c']
+fav_languages['edward'] = ['ruby', 'go']
+fav_languages['phil'] = ['python', 'haskell']
+
+# Display the results, in the same order they were entered.
+for name, langs in fav_languages.items():
+  print(name + ":")
+  for lang in langs:
+    print("- " + lang)
+```
+
+### Generating Dictionaries Using For Loops
+You can use a loop to generate a large number of dictionaries efficiently, if all the dictionaries start out with similar data.
+
+```python
+aliens = []
+
+# Make a million green aliens, worth 5 points each. Have them all start in one row.
+for alien_num in range(1000000):
+  new_alien = {}
+  new_alien['color'] = 'green'
+  new_alien['points'] = 5
+  new_alien['x'] = 20 * alien_num
+  new_alien['y'] = 0
+  aliens.append(new_alien)
+
+# Prove the list contains a million aliens.
+num_aliens = len(aliens)
+
+print("Number of aliens created: " + num_aliens)
 ```
 
 ## Functions
