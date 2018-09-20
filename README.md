@@ -24,8 +24,38 @@
   1. Looping Through A List
   1. Slicing A List
   1. Copying A List
-  1. [NULL]
+  1. List Comprehension
+    1. Generating A List Of Square Numbers
+      1. Using For Loop Method
+      1. Using List Comprehension Method
+    1. Converting A List to Uppercase
+      1. Using For Loop Methos
+      1. Using List Comprehension Method
+1. Tuples
+  1. Defining A Tuple
+  1. Looping Through A Tuple
+  1. Overwriting A Tuple
 1. Dictionaries
+  1. Defining A Dictionary
+  1. Accessing Values
+    1. Directly
+    1. Using `.get()`
+  1. Adding New Key-Pair Values
+  1. Modifying Values
+  1. Removing Key-Pair Values
+  1. Looping Through A Dictionary
+    1. Looping Through All Key-Value Pairs
+    1. Looping Through All Keys
+    1. Looping Through All Values
+    1. Looping Through All Keys (In Order)
+  1. Dictionary Length
+  1. Nesting Dictionaries Inside Lists
+    1. Using `.append()
+    1. Directly`
+  1. Nesting Lists Inside Dictionaries
+  1. Nesting Dictionaries Inside Dictionaries
+  1. Using OrderedDict
+  1. Generating Dictionaries Using For Loops
 1. If Statements
 1. While Loops
 1. Classes
@@ -543,11 +573,9 @@ num_aliens = len(aliens)
 print("Number of aliens created: " + num_aliens)
 ```
 
-## Functions
-
 ## If Statements
 
-### While Loops
+## While Loops
 
 ## Classes
 
