@@ -5,13 +5,13 @@
 1. Strings & Console Output
 1. Conditionals & Control Flow
 1. Functions
-1. Lists
-  1. Defining A List
-  1. Accessing Elements
-  1. Modifying Individual Elements
-  1. Adding Elements
-    1. Using `.append()`
-    1. Using `.insert()`
+1. [Lists](#lists)
+  1. [Defining A List](#defining-a-list)
+  1. [Accessing Elements](#Accessing-Elements)
+  1. [Modifying Individual Elements](#modifying-individual-elements)
+  1. [Adding Elements](#adding-elements)
+    1. [Using `.append()`](#adding-elements-to-the-end-of-a-list-using--.append()-)
+    1. [Using `.insert()`](#inserting-elements-at-particular-positions-using--.insert()-)
   1. Removing Elements
     1. Using `del`
     1. Using `.remove()`
