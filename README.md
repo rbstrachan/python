@@ -1,2 +1,3 @@
-# python
-A python crash course.
+# Beginners Python Cheat Sheet
+
+## 
