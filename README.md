@@ -1,10 +1,22 @@
 # [Beginners Python Crash Course - Cheat Sheet](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
 
 ## Contents
-- Python Syntax
-- Strings & Console Output
-- Conditionals & Control Flow
-- Functions
+- [Python Syntax](#)
+- [Strings & Console Output](#)
+- [Conditional Tests](#conditional-tests)
+  - [Checking For Equality](#checking-for-equality)
+    - [String Comparisons](#string-comparisons)
+    - [Numerical Comparison](#numerical-comparison)
+  - [Checking For Inequality](#checking-for-inequality)
+    - [String Comparison](#string-comparison)
+    - [Numerical Comparison](#numerical-comparison-1)
+  - [Comparison Operators](#comparison-operators)
+  - [Checking Multiple Conditions](#checking-multiple-conditions)
+    - [Using `and`](#using-and-to-check-multiple-conditions)
+    - [Using `or`](#using-or-to-check-multiple-conditions)
+  - [Boolean Values](#boolean-values)
+  - [Ignoring Case](#ignoring-case)
+- [Functions](#functions)
 - [Lists](#lists)
   - [Defining A List](#defining-a-list)
   - [Accessing Elements](#Accessing-Elements)
@@ -62,7 +74,7 @@
 - [Exceptions](#exceptions)
 - [File Import & Export](#file-import--export)
 
-## Python Syntax [CC]
+## Python Syntax
 
 ## Strings & Console Output [CC]
 
@@ -97,7 +109,7 @@ True
 True
 ```
 
-##### Numberical comparison
+##### Numerical comparison
 ```python
 >>> age = 18
 >>> age != 18
@@ -158,6 +170,258 @@ True
 ```
 
 ## Functions
+Functions are named blocks of code designed to do one specific job. Functions allow you to write code once that can then be run whenever you need to accomplish the same task. Functions can take in the information they need, and return the information they
+generate. Using functions effectively makes your programs easier to write, read, test, and fix.
+
+### Defining A Function
+The first line of a function is its definition, marked with the keyword `def`. The name of the function is followed by a set of parentheses and a colon. A docstring, in triple quotes, describes what the function does. The body of a function is indented one level. To call a function, give the name of the function followed by a set of parentheses.
+
+```python
+def greet_user():    # defines the function greet_user()
+  print("Hello!")
+  
+greet_user()         # calls the function greet_user()
+```
+
+### Passing Information To A Function
+Information that's passed to a function is called an argument; information that's received by a function is called a parameter. Arguments are included in parentheses after the function's name, and parameters are listed in
+parentheses in the function's definition.
+
+##### Passing a single argument
+```python
+def greet_user(username):
+  print("Hello, " + username + "!")
+  
+greet_user('jesse')
+greet_user('diana')
+greet_user('brandon')
+```
+
+### Positional & Keyword Arguments
+The two main kinds of arguments are positional and keyword arguments. When you use positional arguments Python matches the first argument in the function call with the first parameter in the function definition, and so forth. With keyword arguments, you specify which parameter each argument should be assigned to in the function call. When you use keyword arguments, the order of the
+arguments doesn't matter.
+
+##### Using positional arguments
+```python
+def describe_pet(animal, name):
+  print("\nI have a " + animal + ".")
+  print("Its name is " + name + ".")
+  
+describe_pet('hamster', 'harry')
+describe_pet('dog', 'willie')
+```
+
+##### Using keyword arguments
+```python
+def describe_pet(animal, name):
+  print("\nI have a " + animal + ".")
+  print("Its name is " + name + ".")
+  
+describe_pet(animal='hamster', name='harry')
+describe_pet(name='willie', animal='dog')
+```
+
+### Default Values
+You can provide a default value for a parameter. When function calls omit this argument the default value will be used. Parameters with default values must be listed after parameters without default values in the function's definition so positional arguments can still work correctly.
+
+##### Using a default value
+```python
+def describe_pet(name, animal='dog'):
+  print("\nI have a " + animal + ".")
+  print("Its name is " + name + ".")
+  
+describe_pet('harry', 'hamster')
+describe_pet('willie')
+```
+
+##### Using `None` to make an argument optional
+```python
+def describe_pet(animal, name=None):
+  print("\nI have a " + animal + ".")
+  if name:
+    print("Its name is " + name + ".")
+    
+describe_pet('hamster', 'harry')
+describe_pet('snake')
+```
+
+### Return Values
+A function can return a value or a set of values. When a function returns a value, the calling line must privide a variable in which to store the return value. A function stops running when it reaches a return statement.
+
+##### Returning a single value
+```python
+def get_full_name(first, last):
+  full_name = first + ' ' + last
+  return full_name.title()
+ 
+musician = get_full_name('jimi', 'hendrix')
+print(musician)
+```
+
+##### Returning a dictionary
+```python
+def build_person(first, last):
+  person = {'first': first, 'last': last}
+  return person
+ 
+musician = build_person('jimi', 'hendrix')
+print(musician)
+```
+
+##### Returning a dictionary with optional values
+```python
+def build_person(first, last, age=None):
+  person = {'first': first, 'last': last}
+  if age:
+    person['age'] = age
+  return person
+  
+musician = build_person('jimi', 'hendrix', 27)
+print(musician)
+
+musician = build_person('janis', 'joplin')
+print(musician)
+```
+
+### Passing A List To A Function
+You can pass a list as an argument to a function, and the function can work with the values in the list. Any changes the function makes to the list will affect the original list. You can prevent a function from modifying a list by passing a copy of the list as an argument.
+
+##### Passing a list as an argument
+```python
+def greet_users(names):
+  for name in names:
+    msg = "Hello, " + name + "!"
+    print(msg)
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+```
+
+##### Allowing a function to modify a list
+###### The following example sends a list of models to a function forprinting. The original list is emptied, and the second list is filled.
+```python
+def print_models(unprinted, printed):
+  while unprinted:
+    current_model = unprinted.pop()
+    print("Printing " + current_model)
+    printed.append(current_model)
+
+# Store some unprinted designs, and print each of them.
+unprinted = ['phone case', 'pendant', 'ring']
+printed = []
+print_models(unprinted, printed)
+
+print("\nUnprinted:", unprinted)
+print("Printed:", printed)
+```
+
+##### Preventing a function from modifying a list
+###### The following example is the same as the previous one, except the original list is unchanged after calling `print_models()`.
+```python
+def print_models(unprinted, printed):
+  while unprinted:
+    current_model = unprinted.pop()
+    print("Printing " + current_model)
+    printed.append(current_model)
+
+# Store some unprinted designs, and print each of them.
+original = ['phone case', 'pendant', 'ring']
+printed = []
+print_models(original[:], printed)
+
+print("\nOriginal:", original)
+print("Printed:", printed)
+```
+
+### Passing An Arbitrary Number Of Arguments
+Sometimes you won't know how many arguments a function will need to accept. Python allows you to collect an arbitrary number of arguments into one parameter using the * operator. A parameter that accepts an arbitrary number of arguments must come last in the function definition. The ** operator allows a parameter to collect an arbitrary
+number of keyword arguments.
+
+##### Collecting an arbitrary number of arguments
+```python
+def make_pizza(size, *toppings):
+  print("\nMaking a " + size + " pizza.")
+  print("Toppings:")
+  for topping in toppings:
+    print("- " + topping)
+
+# Make three pizzas with different toppings.
+make_pizza('small', 'pepperoni')
+make_pizza('large', 'bacon bits', 'pineapple')
+make_pizza('medium', 'mushrooms', 'peppers', 'onions', 'extra cheese')
+```
+
+##### Collecting an arbitrary number of keyword arguments
+```python
+def build_profile(first, last, **user_info):
+  # Build a dict with the required keys.
+  profile = {'first': first, 'last': last}
+  
+  # Add any other keys and values.
+  for key, value in user_info.items():
+    profile[key] = value
+ 
+  return profile
+  
+# Create two users with different kinds of information.
+user_0 = build_profile('albert', 'einstein', location='princeton')
+user_1 = build_profile('marie', 'curie', location='paris', field='chemistry')
+
+print(user_0)
+print(user_1)
+```
+
+### Modules
+You can store your functions in a separate file called a module, and then import the functions you need into the file containing your main program. This allows for cleaner program files. (Make sure your module is stored in the same directory as your main program.)
+
+##### Storing a function in a module
+```python
+def make_pizza(size, *toppings):
+  print("\nMaking a " + size + " pizza.")
+  print("Toppings:")
+  for topping in toppings:
+    print("- " + topping)
+```
+
+##### Importing an entire module
+```python
+import pizza
+
+pizza.make_pizza('medium', 'pepperoni')
+pizza.make_pizza('small', 'bacon', 'pineapple')
+```
+
+##### Importing a specific function
+```python
+from pizza import make_pizza
+
+make_pizza('medium', 'pepperoni')
+make_pizza('small', 'bacon', 'pineapple')
+```
+
+##### Giving a module an alias
+```python
+import pizza as p
+
+p.make_pizza('medium', 'pepperoni')
+p.make_pizza('small', 'bacon', 'pineapple')
+```
+
+##### Giving a function an alias
+```python
+from pizza import make_pizza as mp
+
+mp('medium', 'pepperoni')
+mp('small', 'bacon', 'pineapple')
+```
+
+##### Importing all functions from a module
+```python
+from pizza import *
+
+make_pizza('medium', 'pepperoni')
+make_pizza('small', 'bacon', 'pineapple')
+```
 
 ## Lists
 A list stores a series of items in a particular order. Lists allow you to store sets of information in one place, whether you have just a few items or millions of items. Lists are one of Python's most powerful features readily accessible to new programmers, and
