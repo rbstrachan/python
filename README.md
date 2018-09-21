@@ -1287,7 +1287,7 @@ Class files can get long as you add detailed information and functionality. To h
 ##### Storing classes in a file
 ```python
 class Car():
-  --snip—
+  --snip--
 
 class Battery():
   --snip--
