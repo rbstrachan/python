@@ -108,6 +108,29 @@
     - [Example Of An Infinite Loop](#example-of-an-infinite-loop)
   - [Removing All Instances Of A Value From A List](#removing-all-instances-of-a-value-from-a-list)
 - [Classes](#classes)
+  - Creating Classes
+    - Creating The `Car()` Class
+    - Creating An Object From A Class
+    - Accessing Attribute Values
+    - Calling Methods
+    - Creating Multiple Objects
+  - Modifying Attributes
+    - Directly
+    - Writing A Method To Update An Attributes Value
+    - Writing A Method To Increment An Attributes Value
+  - Class Inheritance
+    - Using The `__init()__` Method
+    - Adding New Methods To The Child Class
+    - Using Child And Parent Methods
+    - Overriding Parent Methods
+  - Instances As Attributes
+    - Creating The `Battery()` Class
+    - Using An Instance As An Attribute
+    - Using The Instance
+  - Importing Classes
+    - Storing Classes In A File
+    - Importing Individual Classes From A Module
+    - Importing An Entire Module
 - [Exceptions](#exceptions)
 - [File Import & Export](#file-import--export)
 
