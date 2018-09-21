@@ -108,29 +108,31 @@
     - [Example Of An Infinite Loop](#example-of-an-infinite-loop)
   - [Removing All Instances Of A Value From A List](#removing-all-instances-of-a-value-from-a-list)
 - [Classes](#classes)
-  - Creating Classes
-    - Creating The `Car()` Class
-    - Creating An Object From A Class
-    - Accessing Attribute Values
-    - Calling Methods
-    - Creating Multiple Objects
-  - Modifying Attributes
-    - Directly
-    - Writing A Method To Update An Attributes Value
-    - Writing A Method To Increment An Attributes Value
-  - Class Inheritance
-    - Using The `__init()__` Method
-    - Adding New Methods To The Child Class
-    - Using Child And Parent Methods
-    - Overriding Parent Methods
-  - Instances As Attributes
-    - Creating The `Battery()` Class
-    - Using An Instance As An Attribute
-    - Using The Instance
-  - Importing Classes
-    - Storing Classes In A File
-    - Importing Individual Classes From A Module
-    - Importing An Entire Module
+  - [Creating Classes](#creating-classes)
+    - [Creating The `Car()` Class](#creating-the-car-class)
+    - [Creating An Object From A Class](#creating-an-object-from-a-class)
+    - [Accessing Attribute Values](#accessing-attribute-values)
+    - [Calling Methods](#calling-methods)
+    - [Creating Multiple Objects](#creating-multiple-objects)
+  - [Modifying Attributes](#modifying-attributes)
+    - [Modifying An Attribute Directly](#modifying-an-attribute-directly)
+    - [Writing A Method To Update An Attributes Value](#writing-a-method-to-update-an-attributes-value)
+    - [Writing A Method To Increment An Attributes Value](#writing-a-method-to-increment-an-attributes-value)
+  - [Class Inheritance](#class-inheritance)
+    - [Using The `__init()__` Method](#using-the-init-method)
+    - [Adding New Methods To The Child Class](#adding-new-methods-to-the-child-class)
+    - [Using Child And Parent Methods](#using-child-and-parent-methods)
+    - [Overriding Parent Methods](#overriding-parent-methods)
+  - [Instances As Attributes](#instances-as-attributes)
+    - [Creating The `Battery()` Class](#creating-the-battery-class)
+    - [Using An Instance As An Attribute](#using-an-instance-as-an-attribute)
+    - [Using The Instance](#using-the-instance)
+  - [Importing Classes](#importing-classes)
+    - [Storing Classes In A File](#storing-classes-in-a-file)
+    - [Importing Individual Classes From A Module](#importing-individual-classes-from-a-module)
+    - [Importing An Entire Module](#importing-an-entire-module-1)
+    - [Importing All Classes From A Module](#importing-all-classes-from-a-module)
+  - [Storing Objects In A List](#storing-objects-in-a-list)
 - [Exceptions](#exceptions)
 - [File Import & Export](#file-import--export)
 
@@ -1199,7 +1201,7 @@ def add_fuel(self, amount):
 ### Class Inheritance
 If the class you're writing is a specialized version of another class, you can use inheritance. When one class inherits from another, it automatically takes on all the attributes and methods of the parent class. The child class is free to introduce new attributes and methods, and override attributes and methods of the parent class. To inherit from another class, include the name of the parent class in parentheses when defining the new class.
 
-##### Using the __init__() method
+##### Using the `__init__()` method
 ```python
 class ElectricCar(Car):
   def __init__(self, make, model, year):
@@ -1327,7 +1329,7 @@ from car import *
 my_beetle = Car('volkswagen', 'beetle', 2016)
 ```
 
-### Storing objects in a list
+### Storing Objects In A List
 A list can hold as many items as you want, so you can make a large number of objects from a class and store them in a list. Here's an example showing how to make a fleet of rental cars, and make sure all the cars are ready to drive.
 
 ```python
