@@ -95,7 +95,18 @@
   - [Using OrderedDict](#using-ordereddict)
   - [Generating Dictionaries Using For Loops](#generating-dictionaries-using-for-loops)
 - [If Statements](#if-statements)
+  - [If Statement](#if-statement)
+  - [If-Else Statement](#if-else-statement)
+  - [If-Elif-Else Chain](#if-elif-else-chain)
 - [While Loops](#while-loops)
+  - [Using A While Loop To Count](#using-a-while-loop-to-count)
+  - [Letting The User Choose When To Quit](#letting-the-user-choose-when-to-quit)
+  - [Using A Flag](#using-a-flag)
+  - [Using `break` to Exit A Loop](#using-break-to-exit-a-loop)
+  - [Using `continue` In A Loop](#using-continue-in-a-loop)
+  - [Avoiding Infinite Loops](#avoiding-infinite-loops)
+    - [Example Of An Infinite Loop](#example-of-an-infinite-loop)
+  - [Removing All Instances Of A Value From A List](#removing-all-instances-of-a-value-from-a-list)
 - [Classes](#classes)
 - [Exceptions](#exceptions)
 - [File Import & Export](#file-import--export)
@@ -1061,7 +1072,7 @@ while True:
 ### Avoiding Infinite Loops
 Every `while` loop needs a way to stop running so it doesn't continue to run forever. If there is now way for the condition to become `False`, the loop with never stop running.
 
-### Example Of An Infinite Loop 
+##### Example Of An Infinite Loop 
 ```python
 while True:
   name = input("\nWho are you? ")
