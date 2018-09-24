@@ -667,7 +667,7 @@ for name in names:
 ```
 
 ###### Using list comprehension method
-```
+```python
 upper_names = [name.upper() for name in names]    # generates list of items converted to uppercase from list 'names'
 ```
 
