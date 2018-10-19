@@ -1369,4 +1369,4 @@ Styling your code helps with readability. This is especially important in Python
 1. Use single blank lines to visually seperate individual groups of code
 
 ### Naming Conventions
-In Python, class names are written on CamelCase and object names are written in lowercase with underscores. Modules that contain classes should still be named in lowercase with underscores.
+In Python, class names are written in CamelCase and object names are written in lowercase with underscores. Modules that contain classes should still be named in lowercase with underscores.
