@@ -140,8 +140,10 @@
   - [The Else Block](#the-else-block)
     - [Using An Else Block For Error Handling](#using-an-else-block-for-error-handling)
     - [Preventing User Input Induced Crashes](#preventing-user-input-induced-crashes)
-  - [The Pass Statement]()
-  - [Bare Except Blocks]()
+  - [The Pass Statement](#the-pass-statement)
+    - [Using The Pass Statement In An Else Block](#using-the-pass-statement-in-an-else-block)
+  - [Bare Except Blocks](#bare-except-blocks)
+    - [Using `Exception`](#using-exception)
 - [File Import & Export](#file-import--export)
 
 ## Python Syntax
@@ -1429,6 +1431,40 @@ while True:
   print("You can't divide by zero!")
  else:
   print(result)
+```
+
+### The Pass Statement
+Sometimes you want your program to just continue running when it encounters an error, without reporting the error to
+the user. Using the pass statement in an else block allows you to do this.
+
+##### Using The Pass Statement In An Else Block
+```python
+f_names = ['alice.txt', 'siddhartha.txt',
+  'moby_dick.txt', 'little_women.txt']
+for f_name in f_names:
+  # Report the length of each file found.
+  try:
+    with open(f_name) as f_obj:
+    lines = f_obj.readlines()
+  except FileNotFoundError:
+    # Just move on to the next file.
+    pass
+  else:
+    num_lines = len(lines)
+    msg = "{0} has {1} lines.".format(f_name, num_lines)
+    print(msg)
+ ```
+
+### Bare Except Blocks
+Exception-handling code should catch specific exceptions that you expect to happen during your program's execution. A bare except block will catch all exceptions, including keyboard interrupts and system exits you might need when forcing a program to close.
+If you want to use a try block and you're not sure which exception to catch, use Exception. It will catch most exceptions, but still allow you to interrupt programs intentionally.
+
+##### Using `Exception`
+```python
+try:
+  # Do something
+except Exception:
+  pass
 ```
 
 ## File Import & Export
