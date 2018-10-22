@@ -134,6 +134,14 @@
     - [Importing All Classes From A Module](#importing-all-classes-from-a-module)
   - [Storing Objects In A List](#storing-objects-in-a-list)
 - [Exceptions](#exceptions)
+  - [The Try-Except Block]()
+    - [Handling The `ZeroDivisionError`]()
+    - [Handling The `FileNotFoundError`]()
+  - [The Else Block]()
+    - [Using An Else Block For Error Handling]()
+    - [Preventing User Input Induced Crashes]()
+  - [The Pass Statement]()
+  - [Bare Except Blocks]()
 - [File Import & Export](#file-import--export)
 
 ## Python Syntax
@@ -1358,6 +1366,70 @@ print("Electric cars:", len(electric_fleet))
 ```
 
 ## Exceptions
+Exceptions are special objects that help your programs respond to errors in appropriate ways. For example if your program tries to open a file that doesn’t exist, you can use exceptions to display an informative error message instead of having the program crash.
+
+### The Try-Except Block
+When you think an error may occur, you can write a try-except block to handle the exception that might be raised. The try block tells Python to try running some code, and the except block tells Python what to do if the code results in a particular kind of error.
+
+##### Handling The `ZeroDivisionError`
+```python
+try:
+  print(5/0)
+except ZeroDivisionError:
+  print("You can't divide by zero!")
+```
+
+##### Handling The `FileNotFoundError`
+```python
+file_name = 'siddhartha.txt'
+
+try:
+  with open(file_name) as file_obj:
+  lines = file_obj.readlines()
+except FileNotFoundError:
+  msg = "Can't find file {0}.".format(file_name)
+  print(msg)
+```
+
+### The Else Block
+The try block should only contain code that may cause an error. Any code that depends on the try block running successfully should be placed in the else block.
+
+##### Using An Else Block For Error Handling
+```python
+print("Enter two numbers. I'll divide them.")
+x = input("First number: ")
+y = input("Second number: ")
+
+try:
+  result = int(x) / int(y)
+except ZeroDivisionError:
+  print("You can't divide by zero!")
+else:
+  print(result)
+```
+
+##### Preventing User Input Induced Crashes
+Without the except block in the following example, the program would crash if the user tries to divide by zero. As written, it will handle the error gracefully and keep running.
+```python
+print("Enter two numbers. I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+  x = input("\nFirst number: ")
+  if x == 'q':
+    break
+  
+  y = input("Second number: ")
+  if y == 'q':
+    break
+ 
+ try:
+  result = int(x) / int(y)
+ except ZeroDivisionError:
+  print("You can't divide by zero!")
+ else:
+  print(result)
+```
 
 ## File Import & Export
 
@@ -1370,3 +1442,9 @@ Styling your code helps with readability. This is especially important in Python
 
 ### Naming Conventions
 In Python, class names are written in CamelCase and object names are written in lowercase with underscores. Modules that contain classes should still be named in lowercase with underscores.
+
+### Knowing Which Exception You Need To Handle
+It can be hard to know what kind of exception to handle when writing code. Try writing your code without a try block, and make it generate an error. The traceback will tell you what kind of exception your program needs to handle.
+
+### Deciding To Report An Error
+Well-written, properly tested code is not very prone to internal errors such as syntax or logical errors. But every time your program depends on something external such as user input or the existence of a file, there's a possibility of an exception being raised. It's up to you how to communicate errors to your users. Sometimes users need to know if a file is missing; sometimes it's better to handle the error silently.
