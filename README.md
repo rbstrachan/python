@@ -45,7 +45,7 @@
     - [Importing All Functions From A Module](#importing-all-functions-from-a-module)
 - [Lists](#lists)
   - [Defining A List](#defining-a-list)
-  - [Accessing Elements](#Accessing-Elements)
+  - [Accessing Elements](#accessing-elements)
   - [Modifying Individual Elements](#modifying-individual-elements)
   - [Adding Elements](#adding-elements)
     - [Using `.append()`](#adding-elements-to-the-end-of-a-list-using-append)
@@ -92,7 +92,7 @@
     - [Directly](#nesting-dictionaries-directly)
   - [Nesting Lists Inside Dictionaries](#nesting-lists-inside-dictionaries)
   - [Nesting Dictionaries Inside Dictionaries](#nesting-dictionaries-inside-dictionaries)
-  - [Using OrderedDict](#using-ordereddict)
+  - [Using `OrderedDict`](#using-ordereddict)
   - [Generating Dictionaries Using For Loops](#generating-dictionaries-using-for-loops)
 - [If Statements](#if-statements)
   - [If Statement](#if-statement)
@@ -119,7 +119,7 @@
     - [Writing A Method To Update An Attributes Value](#writing-a-method-to-update-an-attributes-value)
     - [Writing A Method To Increment An Attributes Value](#writing-a-method-to-increment-an-attributes-value)
   - [Class Inheritance](#class-inheritance)
-    - [Using The `__init()__` Method](#using-the-init-method)
+    - [Using The `__init()__` Method](#using-the-__init__-method)
     - [Adding New Methods To The Child Class](#adding-new-methods-to-the-child-class)
     - [Using Child And Parent Methods](#using-child-and-parent-methods)
     - [Overriding Parent Methods](#overriding-parent-methods)
@@ -953,7 +953,7 @@ for username, user_dict in users.items():
   print("\tLocation: " + location.title())
 ```
 
-### Using OrderedDict
+### Using `OrderedDict`
 Standard Python dictionaries don't keep track of the order in which keys and values are added; they only preserve the
 association between each key and its value. If you want to preserve the order in which keys and values are added, use
 an OrderedDict.
