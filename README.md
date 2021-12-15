@@ -1,7 +1,8 @@
 # [Beginners Python Crash Course - Cheat Sheet](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
 
 ## Contents
-- [Python Syntax](#)
+- [Python Syntax](#python-syntax)
+-   [Creating Variables](#creating-variables)
 - [Strings & Console Output](#)
 - [Conditional Tests](#conditional-tests)
   - [Checking For Equality](#checking-for-equality)
@@ -147,6 +148,8 @@
 - [File Import & Export](#file-import--export)
 
 ## Python Syntax
+### Creating Variables
+To create a variable in Python, 
 
 ## Strings & Console Output [CC]
 
@@ -166,11 +169,16 @@ True
 False
 ```
 
-##### Numerical comparison
+##### Numerical comparisons
 ```python
 >>> age = 18
 >>> age == 18
 True
+```
+```python
+>>> age = 21
+>>> rings == 18
+False
 ```
 
 ### Checking For Inequality
@@ -230,8 +238,8 @@ False
 A boolean value is either `True` or `False`. Variables with boolean values are often used to keep track of certain conditions within a program.
 
 ```python
-game_active = True
-can_edit = False
+>>> game_active = True
+>>> can_edit = False
 ```
 
 ### Ignoring Case
