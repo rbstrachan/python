@@ -221,16 +221,16 @@ SyntaxError: can't assign to literal
 SyntaxError: invalid syntax
 ```
 #### Using a reserved keyword
-Python has special reserved keywords, such as `int` and `import`, etc. While, technically, reserved keywords *can* be used as variable names, it is bad practice and can prevent Python from running, producing errors. Reserved keywords should never be used as variable names.
+Python has special reserved keywords, such as `int`, `pass` and `import`, among others. While, technically, some reserved keywords *can* be used as variable names, it is bad practice and often prevents Python from running, producing errors. Reserved keywords should never be used as variable names. For example;
 ```python
->>> break = [5, 4, 3, 2, 1]
+break = [5, 4, 3, 2, 1]
 ```
-This code will likely produce a syntax error, as it is often illegal in Python to assign a reserved keyword to an object. 
+This code will likely produce a syntax error, as it is illegal in Python to assign the `break` command to an object. 
 ```python
 >>> break = [5, 4, 3, 2, 1]
 SyntaxError: invalid syntax
 ```
-However, if the code *does* run, it would then be impossible to break out of a function. For example;
+However, if the code *did* run, it would then be impossible to break out of a function. For example;
 ```python
 for i in range(len(board)):
 	for j in range(len(board[0])):
