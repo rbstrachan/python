@@ -233,9 +233,9 @@ SyntaxError: invalid syntax
 However, if the code *did* run, it would then be impossible to break out of a function. For example;
 ```python
 for i in range(len(board)):
-  for j in range(len(board[0])):
-    if board[i][j] == 0:
-      break
+    for j in range(len(board[0])):
+        if board[i][j] == 0:
+            break
 ```
 will no longer break out of the function but instead print `[5, 4, 3, 2, ]` to the console.
 
