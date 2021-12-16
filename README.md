@@ -198,16 +198,17 @@ True
 None
 ```
 
-## Declaring Variables
+## Assigning Variables
 Variables are assigned from left to right, meaning the variable name always comes on the left of the `=` and the value of the variable on the right.
 
 Variables;
-- may not start with a number or special character (other than the 'throwaway' marker `_`);
-- may be declared simultaneously with other variables of any type,
-- may be declared in a cascading fashion, and;
+- may not start with a number, special character (except the 'throwaway' marker `_`) or reserved keyword;
+- may be assigned simultaneously with other variables of any type;
+- may be assigned in a cascading fashion;
+- may be ephemeral; and,
 - are case sensitive.
 
-### Illegal variables
+### Attempting to assign 'illegal' variables
 #### Starting with a number
 ```python
 >>> 0 = x
@@ -219,22 +220,39 @@ SyntaxError: can't assign to literal
 >>> $tree = 'cheap'
 SyntaxError: invalid syntax
 ```
-
-### Useless variables
+#### Using a reserved keyword
+Python has special reserved keywords, such as `int` and `import`, etc. While, technically, reserved keywords *can* be used as variable names, it is bad practice and can prevent Python from running, producing errors. Reserved keywords should never be used as variable names.
 ```python
-for _ in range(5):
-	print('test')
+>>> break = [5, 4, 3, 2, 1]
 ```
-Using `_` before a variable name indicates that the variable is 'useless' and therefore will not be used again in the program.
+This code will likely produce a syntax error, as it is often illegal in Python to assign a reserved keyword to an object. 
+```python
+>>> break = [5, 4, 3, 2, 1]
+SyntaxError: invalid syntax
+```
+However, if the code *does* run, it would then be impossible to break out of a function. For example;
+```python
+for i in range(len(board)):
+	for j in range(len(board[0])):
+		if board[i][j] == 0:
+			break
+```
+will no longer break out of the function but instead print `[5, 4, 3, 2, ]` to the console.
 
-##### Defining multiple variables simultaneously
+The full list of reserved keywords can be displayed with:
+```python
+import keyword
+print(keyword.kwlist)
+```
+
+### Assigning multiple variables simultaneously
 ```python
 >>> a, b, c, d = 1, 'two', [3], 4
 >>> print(a, b, c, d)
 1 two [3] 4
 ```
 
-##### Cascading a single object to multiple variables
+### Cascading a single object to multiple variables
 ```python
 >>> a = b = c = 25
 >>> print(a, b, c)
@@ -244,20 +262,20 @@ Using `_` before a variable name indicates that the variable is 'useless' and th
 >>> print(d, e, f)
 [5, 6, 7, 8, 9] [5, 6, 7, 8, 9] [5, 6, 7, 8, 9]
 ```
-
 __[Note]__
-Be aware that cascading an object to multiple variable names does not create multiple objects in memory. Instead, all cascaded variable names refer to the same object in memory. This may present a problem if the the object is modified after assignment.
+Be aware that cascading a single object to multiple variable names does not create multiple objects in memory. Instead, all cascaded variable names refer to the same object in memory. The behaviour of such cascaded variables is normal when *reassigned*, however, problems may arise if the the object is *modified* after assignment.
 
-##### Reassigning a cascaded variable after assignment
+#### Reassigning a cascaded variable after assignment
+Reassigning a different object to a previously cascaded variable name does not change the object(s) assigned to the other cascaded variable names.
 ```python
 >>> x = y = [1, 2, 3]
 >>> y = [3, 4, 5]
 >>> print(x, y)
 [1, 2, 3] [3, 4, 5]
 ```
-Reassigning a different object to a cascaded variable name does not change the object(s) assigned to the other cascaded variable names. However;
 
 ##### Modifying a cascaded variable after assignment
+Both cascaded variable names `x` and `y` refer to the same object in memory. When that object is *modified* after assignment, the change is reflected in *both* cascaded variable names, despite the fact that the change was only made using one of the objects assigned names.
 ```python
 >>> x = y = [6, 7, 8]
 >>> x[0] = 14
@@ -265,21 +283,19 @@ Reassigning a different object to a cascaded variable name does not change the o
 [14, 7, 8] [14, 7, 8]
 ```
 
-In this case, because both cascaded variable names `x` and `y` refer to the same object in memory, when that object is *modified* after assignment, the change is reflected in *both* cascaded variable names, despite the fact that the change was only made using one of the objects assigned names.
+### Using 'useless' variables
+Using `_` before a variable name indicates that the variable is 'useless' and therefore will not be used again in the program.
+```python
+for _ in range(5):
+	important_func()
+```
 
-##### Same letter, different case, separate variables
+### Same letter, different case, separate variable names, separate objects
+Python treats `x` and `X`, as well as `turn` and `Turn` as two different variable names. In the example below, `X` has not been declared and so will throw a `NameError`.
 ```python
 >>> x = 9
 >>> y = X * 5
 NameError: name 'X' is not defined
-```
-
-### Reserved Keywords
-Python has special reserved keywords, such as `int` and `import`, etc. Reserved keywords cannot be used as variable names. The full list of reserved keywords can be displayed with:
-
-```python
-import keyword
-print(keyword.kwlist)
 ```
 
 ### Indentation 
