@@ -292,7 +292,7 @@ for _ in range(5):
 
 ### Same letter, different case, separate variable names, separate objects
 Python treats lower case `x` and upper case `X`, as well as `turn` and `Turn` as two different variable names.
-In the example below, `X` has not been defined and so will throw a `NameError`.
+In the example below, upper case `X` has not been defined and so will throw a `NameError`.
 Note that `turn` is an `int` type object whereas `Turn` is a `dict` type object. This is possible because the casing of `turn` and `Turn` is different, leading Python to store the two variables as separate objects in memory.
 ```python
 >>> x = 9
