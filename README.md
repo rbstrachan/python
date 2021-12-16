@@ -147,11 +147,11 @@
 	- [Using `Exception`](#using-exception)
 - [File Import & Export](#file-import--export)
 
-## Python Syntax
-### Creating Variables
+# Python Syntax
+## Creating Variables
 To create a variable in Python, specify the name of the variable then assign a value to it with `=`. It is not necessary to declare a variable in advance or to assign a data type to it.
 
-##### Integer variables
+### Integer variables
 ```python
 >>> a = 2
 >>> print(a)
@@ -162,7 +162,7 @@ To create a variable in Python, specify the name of the variable then assign a v
 9223372036854775807
 ```
 
-##### Floating point variables
+### Floating point variables
 ```python
 >>> pi = 3.14
 >>> print(pi)
@@ -173,7 +173,7 @@ To create a variable in Python, specify the name of the variable then assign a v
 2.71828182846
 ```
 
-##### String variables
+### String variables
 ```python
 >>> c = 'hello'
 >>> print(c)
@@ -184,31 +184,22 @@ hello
 John Doe
 ```
 
-##### Boolean variables
+### Boolean variables
 ```python
 >>> q = True
 >>> print(q)
 True
 ```
 
-##### Empty and `Null` variables
+### Empty and `Null` variables
 ```python
 >>> x = None
 >>> print(x)
 None
 ```
 
-### Assigning Variables
+## Declaring Variables
 Variables are assigned from left to right, meaning the variable name always comes on the left of the `=` and the value of the variable on the right.
-
-```python
->>> x = 0
->>> print(x)
-0
-
->>> 0 = x
-SyntaxError: can't assign to literal
-```
 
 Variables;
 - may not start with a number or special character (other than the 'throwaway' marker `_`);
@@ -216,12 +207,24 @@ Variables;
 - may be declared in a cascading fashion, and;
 - are case sensitive.
 
-##### Defining a useless variable
+### Illegal variables
+#### Starting with a number
+```python
+>>> 0 = x
+SyntaxError: can't assign to literal
+```
+
+#### Starting with a special character
+```python
+>>> $tree = 'cheap'
+SyntaxError: invalid syntax
+```
+
+### Useless variables
 ```python
 for _ in range(5):
 	print('test')
 ```
-
 Using `_` before a variable name indicates that the variable is 'useless' and therefore will not be used again in the program.
 
 ##### Defining multiple variables simultaneously
@@ -279,7 +282,7 @@ import keyword
 print(keyword.kwlist)
 ```
 
-### Indentation
+### Indentation 
 
 ## Strings & Console Output [CC]
 
@@ -543,8 +546,7 @@ print("Printed:", printed)
 ```
 
 ### Passing An Arbitrary Number Of Arguments
-Sometimes you won't know how many arguments a function will need to accept. Python allows you to collect an arbitrary number of arguments into one parameter using the * operator. A parameter that accepts an arbitrary number of arguments must come last in the function definition. The ** operator allows a parameter to collect an arbitrary
-number of keyword arguments.
+Sometimes you won't know how many arguments a function will need to accept. Python allows you to collect an arbitrary number of arguments into one parameter using the `*` operator. A parameter that accepts an arbitrary number of arguments must come last in the function definition. The `**` operator allows a parameter to collect an arbitrary number of keyword arguments.
 
 ##### Collecting an arbitrary number of arguments
 ```python
