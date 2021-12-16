@@ -237,7 +237,7 @@ for i in range(len(board)):
         if board[i][j] == 0:
             break
 ```
-will no longer break out of the function but instead print `[5, 4, 3, 2, ]` to the console.
+would no longer break out of the function but instead print `[5, 4, 3, 2, 1]` to the console.
 
 The full list of reserved keywords can be displayed with:
 ```python
@@ -274,7 +274,7 @@ Reassigning a different object to a previously cascaded variable name does not c
 [1, 2, 3] [3, 4, 5]
 ```
 
-##### Modifying a cascaded variable after assignment
+#### Modifying a cascaded variable after assignment
 Both cascaded variable names `x` and `y` refer to the same object in memory. When that object is *modified* after assignment, the change is reflected in *both* cascaded variable names, despite the fact that the change was only made using one of the objects assigned names.
 ```python
 >>> x = y = [6, 7, 8]
@@ -291,11 +291,22 @@ for _ in range(5):
 ```
 
 ### Same letter, different case, separate variable names, separate objects
-Python treats `x` and `X`, as well as `turn` and `Turn` as two different variable names. In the example below, `X` has not been declared and so will throw a `NameError`.
+Python treats `x` and `X`, as well as `turn` and `Turn` as two different variable names.
+In the example below, `X` has not been defined and so will throw a `NameError`.
+Note that `turn` is an `int` type object whereas `Turn` is a `dict` type object. This is possible because the casing of `turn` and `Turn` is different, leading Python to store the two variables as separate objects in memory.
 ```python
 >>> x = 9
 >>> y = X * 5
 NameError: name 'X' is not defined
+
+>>> turn = 5
+>>> Turn = {
+...      'Andy': False,
+...     'James': False,
+...     'Steve': True    
+... }
+>>> print(turn, Turn)
+5 {'Andy': False, 'James': False, 'Steve': True}
 ```
 
 ### Indentation 
