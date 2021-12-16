@@ -265,7 +265,7 @@ print(keyword.kwlist)
 __[Note]__
 Be aware that cascading a single object to multiple variable names does not create multiple objects in memory. Instead, all cascaded variable names refer to the same object in memory. The behaviour of such cascaded variables is normal when *reassigned*, however, problems may arise if the the object is *modified* after assignment.
 
-https://carbon.now.sh/22abe292-cfef-42f0-abd4-3d93dc21cf9d
+![](https://carbon.now.sh/22abe292-cfef-42f0-abd4-3d93dc21cf9d)
 
 #### Reassigning a cascaded variable after assignment
 Reassigning a different object to a previously cascaded variable name does not change the object(s) assigned to the other cascaded variable names.
