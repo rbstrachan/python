@@ -149,7 +149,70 @@
 
 ## Python Syntax
 ### Creating Variables
-To create a variable in Python, 
+To create a variable in Python, specify the name of the variable then assign a value to it with `=`. It is not necessary to declare a variable in advance or to assign a data type to it.
+
+##### Integer variables
+```python
+>>> a = 2
+>>> print(a)
+2
+
+>>> b = 9223372036854775807
+>>> print(b)
+9223372036854775807
+```
+
+##### Floating point variables
+```python
+>>> pi = 3.14
+>>> print(pi)
+3.14
+
+>>> e = 2.71828182846
+>>> print(e)
+2.71828182846
+```
+
+##### String variables
+```python
+>>> c = 'hello'
+>>> print(c)
+'hello'
+
+>>> name = 'John Doe'
+>>> print(name)
+'John Doe'
+```
+
+##### Boolean variables
+```python
+>>> q = True
+>>> print(q)
+True
+```
+
+##### Empty and `Null` variables
+```python
+>>> x = None
+>>> print(x)
+None
+```
+
+Variables are assigned from left to right, meaning the variable name always comes on the left of the `=` and the value on the right.
+
+```python
+>>> 0 = x
+SyntaxError: can't assign to literal
+```
+
+Python has special reserved keywords, such as `int`, `import`, etc. Reserved keywords cannot be used as variable names. The full list of reserved keywords can be displayed with:
+
+```python
+import keyword
+print(keyword.kwlist)
+```
+
+
 
 ## Strings & Console Output [CC]
 
