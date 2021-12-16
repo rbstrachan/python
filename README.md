@@ -6,70 +6,70 @@
 - [Strings & Console Output](#)
 - [Conditional Tests](#conditional-tests)
   - [Checking For Equality](#checking-for-equality)
-    - [String Comparisons](#string-comparisons)
-    - [Numerical Comparison](#numerical-comparison)
+	- [String Comparisons](#string-comparisons)
+	- [Numerical Comparison](#numerical-comparison)
   - [Checking For Inequality](#checking-for-inequality)
-    - [String Comparison](#string-comparison)
-    - [Numerical Comparison](#numerical-comparison-1)
+	- [String Comparison](#string-comparison)
+	- [Numerical Comparison](#numerical-comparison-1)
   - [Comparison Operators](#comparison-operators)
   - [Checking Multiple Conditions](#checking-multiple-conditions)
-    - [Using `and`](#using-and-to-check-multiple-conditions)
-    - [Using `or`](#using-or-to-check-multiple-conditions)
+	- [Using `and`](#using-and-to-check-multiple-conditions)
+	- [Using `or`](#using-or-to-check-multiple-conditions)
   - [Boolean Values](#boolean-values)
   - [Ignoring Case](#ignoring-case)
 - [Functions](#functions)
   - [Defining A Function](#defining-a-function)
   - [Passing Information To A Function](#passing-information-to-a-function)
   - [Positional & Keyword Arguments](#positional--keyword-arguments)
-    - [Using Positional Arguments](#using-positional-arguments)
-    - [Using Keyword Arguments](#using-keyword-arguments)
+	- [Using Positional Arguments](#using-positional-arguments)
+	- [Using Keyword Arguments](#using-keyword-arguments)
   - [Default Values](#default-values)
-    - [Using A Default Value](#using-a-default-value)
-    - [Using `None`](#using-none-to-make-an-argument-optional)
+	- [Using A Default Value](#using-a-default-value)
+	- [Using `None`](#using-none-to-make-an-argument-optional)
   - [Return Values](#return-values)
-    - [Returning A Single Value](#returning-a-single-value)
-    - [Returning A Dictionary](#returning-a-dictionary)
-    - [Returning A Dictionary (With Optional Values)](#returning-a-dictionary-with-optional-values)
+	- [Returning A Single Value](#returning-a-single-value)
+	- [Returning A Dictionary](#returning-a-dictionary)
+	- [Returning A Dictionary (With Optional Values)](#returning-a-dictionary-with-optional-values)
   - [Passing A List To A Function](#passing-a-list-to-a-function)
-    - [Passing A List As An Argument](#passing-a-list-as-an-argument)
-    - [Allowing A Function To Modify A List](#allowing-a-function-to-modify-a-list)
-    - [Preventing A Function From Modifying A List](#preventing-a-function-from-modifying-a-list)
+	- [Passing A List As An Argument](#passing-a-list-as-an-argument)
+	- [Allowing A Function To Modify A List](#allowing-a-function-to-modify-a-list)
+	- [Preventing A Function From Modifying A List](#preventing-a-function-from-modifying-a-list)
   - [Passing An Arbitrary Number Of Arguments](#passing-an-arbitrary-number-of-arguments)
-    - [Collecting An Arbitrary Number Of Arguments](#collecting-an-arbitrary-number-of-arguments)
-    - [Collecting An Arbitrary Number Of Keyword Arguments](#collecting-an-arbitrary-number-of-keyword-arguments)
+	- [Collecting An Arbitrary Number Of Arguments](#collecting-an-arbitrary-number-of-arguments)
+	- [Collecting An Arbitrary Number Of Keyword Arguments](#collecting-an-arbitrary-number-of-keyword-arguments)
   - [Modules](#modules)
-    - [Storing A Function In A Module](#storing-a-function-in-a-module)
-    - [Importing An Entire Module](#importing-an-entire-module)
-    - [Importing A Specific Function](#importing-a-specific-function)
-    - [Giving A Module An Alias](#giving-a-module-an-alias)
-    - [Giving A Function An Alias](#giving-a-function-an-alias)
-    - [Importing All Functions From A Module](#importing-all-functions-from-a-module)
+	- [Storing A Function In A Module](#storing-a-function-in-a-module)
+	- [Importing An Entire Module](#importing-an-entire-module)
+	- [Importing A Specific Function](#importing-a-specific-function)
+	- [Giving A Module An Alias](#giving-a-module-an-alias)
+	- [Giving A Function An Alias](#giving-a-function-an-alias)
+	- [Importing All Functions From A Module](#importing-all-functions-from-a-module)
 - [Lists](#lists)
   - [Defining A List](#defining-a-list)
   - [Accessing Elements](#accessing-elements)
   - [Modifying Individual Elements](#modifying-individual-elements)
   - [Adding Elements](#adding-elements)
-    - [Using `.append()`](#adding-elements-to-the-end-of-a-list-using-append)
-    - [Using `.insert()`](#inserting-elements-at-particular-positions-using-insert)
+	- [Using `.append()`](#adding-elements-to-the-end-of-a-list-using-append)
+	- [Using `.insert()`](#inserting-elements-at-particular-positions-using-insert)
   - [Removing Elements](#removing-elements)
-    - [Using `del`](#deleting-elements-by-index-position-using-del)
-    - [Using `.remove()`](#removing-elements-by-value-using-remove)
+	- [Using `del`](#deleting-elements-by-index-position-using-del)
+	- [Using `.remove()`](#removing-elements-by-value-using-remove)
   - [Popping Elements](#popping-elements)
   - [List Length](#list-length)
   - [Sorting A List](#sorting-a-list)
-    - [Using `.sort()`](#permanently-sorting-a-list-using-sort)
-    - [Using `sorted()`](#temporarily-sorting-a-list-using-sorted)
-    - [Using `.reverse()`](#reversing-the-order-of-a-list-using-reverse)
+	- [Using `.sort()`](#permanently-sorting-a-list-using-sort)
+	- [Using `sorted()`](#temporarily-sorting-a-list-using-sorted)
+	- [Using `.reverse()`](#reversing-the-order-of-a-list-using-reverse)
   - [Looping Through A List](#looping-through-a-list)
   - [Slicing A List](#slicing-a-list)
   - [Copying A List](#copying-a-list)
   - [List Comprehension](#list-comprehensions)
-    - [Generating A List Of Square Numbers](#generating-a-list-of-square-numbers)
-      - [Using For Loop Method](#using-for-loop-method)
-      - [Using List Comprehension Method](#using-list-comprehension-method)
-    - [Converting A List to Uppercase](#converting-a-list-to-uppercase)
-      - [Using For Loop Method](#using-for-loop-method-1)
-      - [Using List Comprehension Method](#using-list-comprehension-method-1)
+	- [Generating A List Of Square Numbers](#generating-a-list-of-square-numbers)
+	  - [Using For Loop Method](#using-for-loop-method)
+	  - [Using List Comprehension Method](#using-list-comprehension-method)
+	- [Converting A List to Uppercase](#converting-a-list-to-uppercase)
+	  - [Using For Loop Method](#using-for-loop-method-1)
+	  - [Using List Comprehension Method](#using-list-comprehension-method-1)
 - [Tuples](#tuples)
   - [Defining A Tuple](#defining-a-tuple)
   - [Looping Through A Tuple](#looping-through-a-tuple)
@@ -77,20 +77,20 @@
 - [Dictionaries](#dictionaries)
   - [Defining A Dictionary](#defining-a-dictionary)
   - [Accessing Values](#accessing-values)
-    - [Directly](#accessing-key-values-directly)
-    - [Using `.get()`](#accessing-key-values-using-get)
+	- [Directly](#accessing-key-values-directly)
+	- [Using `.get()`](#accessing-key-values-using-get)
   - [Adding New Key-Pair Values](#adding-new-key-pair-values)
   - [Modifying Values](#modifying-values)
   - [Removing Key-Pair Values](#removing-key-value-pairs)
   - [Looping Through A Dictionary](#looping-through-a-dictionary)
-    - [Looping Through All Key-Value Pairs](#looping-through-all-key-value-pairs)
-    - [Looping Through All Keys](#looping-through-all-keys)
-    - [Looping Through All Values](#looping-through-all-values)
-    - [Looping Through All Keys (In Order)](#looping-through-all-the-keys-in-order)
+	- [Looping Through All Key-Value Pairs](#looping-through-all-key-value-pairs)
+	- [Looping Through All Keys](#looping-through-all-keys)
+	- [Looping Through All Values](#looping-through-all-values)
+	- [Looping Through All Keys (In Order)](#looping-through-all-the-keys-in-order)
   - [Dictionary Length](#dictionary-length)
   - [Nesting Dictionaries Inside Lists](#nesting-dictionaries-inside-lists)
-    - [Using `.append()`](#nesting-dictionaries-using-append)
-    - [Directly](#nesting-dictionaries-directly)
+	- [Using `.append()`](#nesting-dictionaries-using-append)
+	- [Directly](#nesting-dictionaries-directly)
   - [Nesting Lists Inside Dictionaries](#nesting-lists-inside-dictionaries)
   - [Nesting Dictionaries Inside Dictionaries](#nesting-dictionaries-inside-dictionaries)
   - [Using `OrderedDict`](#using-ordereddict)
@@ -106,45 +106,45 @@
   - [Using `break` To Exit A Loop](#using-break-to-exit-a-loop)
   - [Using `continue` In A Loop](#using-continue-in-a-loop)
   - [Avoiding Infinite Loops](#avoiding-infinite-loops)
-    - [Example Of An Infinite Loop](#example-of-an-infinite-loop)
+	- [Example Of An Infinite Loop](#example-of-an-infinite-loop)
   - [Removing All Instances Of A Value From A List](#removing-all-instances-of-a-value-from-a-list)
 - [Classes](#classes)
   - [Creating Classes](#creating-classes)
-    - [Creating The `Car()` Class](#creating-the-car-class)
-    - [Creating An Object From A Class](#creating-an-object-from-a-class)
-    - [Accessing Attribute Values](#accessing-attribute-values)
-    - [Calling Methods](#calling-methods)
-    - [Creating Multiple Objects](#creating-multiple-objects)
+	- [Creating The `Car()` Class](#creating-the-car-class)
+	- [Creating An Object From A Class](#creating-an-object-from-a-class)
+	- [Accessing Attribute Values](#accessing-attribute-values)
+	- [Calling Methods](#calling-methods)
+	- [Creating Multiple Objects](#creating-multiple-objects)
   - [Modifying Attributes](#modifying-attributes)
-    - [Modifying An Attribute Directly](#modifying-an-attribute-directly)
-    - [Writing A Method To Update An Attributes Value](#writing-a-method-to-update-an-attributes-value)
-    - [Writing A Method To Increment An Attributes Value](#writing-a-method-to-increment-an-attributes-value)
+	- [Modifying An Attribute Directly](#modifying-an-attribute-directly)
+	- [Writing A Method To Update An Attributes Value](#writing-a-method-to-update-an-attributes-value)
+	- [Writing A Method To Increment An Attributes Value](#writing-a-method-to-increment-an-attributes-value)
   - [Class Inheritance](#class-inheritance)
-    - [Using The `__init()__` Method](#using-the-__init__-method)
-    - [Adding New Methods To The Child Class](#adding-new-methods-to-the-child-class)
-    - [Using Child And Parent Methods](#using-child-and-parent-methods)
-    - [Overriding Parent Methods](#overriding-parent-methods)
+	- [Using The `__init()__` Method](#using-the-__init__-method)
+	- [Adding New Methods To The Child Class](#adding-new-methods-to-the-child-class)
+	- [Using Child And Parent Methods](#using-child-and-parent-methods)
+	- [Overriding Parent Methods](#overriding-parent-methods)
   - [Instances As Attributes](#instances-as-attributes)
-    - [Creating The `Battery()` Class](#creating-the-battery-class)
-    - [Using An Instance As An Attribute](#using-an-instance-as-an-attribute)
-    - [Using The Instance](#using-the-instance)
+	- [Creating The `Battery()` Class](#creating-the-battery-class)
+	- [Using An Instance As An Attribute](#using-an-instance-as-an-attribute)
+	- [Using The Instance](#using-the-instance)
   - [Importing Classes](#importing-classes)
-    - [Storing Classes In A File](#storing-classes-in-a-file)
-    - [Importing Individual Classes From A Module](#importing-individual-classes-from-a-module)
-    - [Importing An Entire Module](#importing-an-entire-module-1)
-    - [Importing All Classes From A Module](#importing-all-classes-from-a-module)
+	- [Storing Classes In A File](#storing-classes-in-a-file)
+	- [Importing Individual Classes From A Module](#importing-individual-classes-from-a-module)
+	- [Importing An Entire Module](#importing-an-entire-module-1)
+	- [Importing All Classes From A Module](#importing-all-classes-from-a-module)
   - [Storing Objects In A List](#storing-objects-in-a-list)
 - [Exceptions](#exceptions)
   - [The Try-Except Block](#the-try-except-block)
-    - [Handling The `ZeroDivisionError`](#handling-the-zerodivisionerror)
-    - [Handling The `FileNotFoundError`](#handling-the-filenotfounderror)
+	- [Handling The `ZeroDivisionError`](#handling-the-zerodivisionerror)
+	- [Handling The `FileNotFoundError`](#handling-the-filenotfounderror)
   - [The Else Block](#the-else-block)
-    - [Using An Else Block For Error Handling](#using-an-else-block-for-error-handling)
-    - [Preventing User Input Induced Crashes](#preventing-user-input-induced-crashes)
+	- [Using An Else Block For Error Handling](#using-an-else-block-for-error-handling)
+	- [Preventing User Input Induced Crashes](#preventing-user-input-induced-crashes)
   - [The Pass Statement](#the-pass-statement)
-    - [Using The Pass Statement In An Else Block](#using-the-pass-statement-in-an-else-block)
+	- [Using The Pass Statement In An Else Block](#using-the-pass-statement-in-an-else-block)
   - [Bare Except Blocks](#bare-except-blocks)
-    - [Using `Exception`](#using-exception)
+	- [Using `Exception`](#using-exception)
 - [File Import & Export](#file-import--export)
 
 ## Python Syntax
@@ -177,11 +177,11 @@ To create a variable in Python, specify the name of the variable then assign a v
 ```python
 >>> c = 'hello'
 >>> print(c)
-'hello'
+hello
 
 >>> name = 'John Doe'
 >>> print(name)
-'John Doe'
+John Doe
 ```
 
 ##### Boolean variables
@@ -198,21 +198,88 @@ True
 None
 ```
 
-Variables are assigned from left to right, meaning the variable name always comes on the left of the `=` and the value on the right.
+### Assigning Variables
+Variables are assigned from left to right, meaning the variable name always comes on the left of the `=` and the value of the variable on the right.
 
 ```python
+>>> x = 0
+>>> print(x)
+0
+
 >>> 0 = x
 SyntaxError: can't assign to literal
 ```
 
-Python has special reserved keywords, such as `int`, `import`, etc. Reserved keywords cannot be used as variable names. The full list of reserved keywords can be displayed with:
+Variables;
+- may not start with a number or special character (other than the 'throwaway' marker `_`);
+- may be declared simultaneously with other variables of any type,
+- may be declared in a cascading fashion, and;
+- are case sensitive.
+
+##### Defining a useless variable
+```python
+for _ in range(5):
+	print('test')
+```
+
+Using `_` before a variable name indicates that the variable is 'useless' and therefore will not be used again in the program.
+
+##### Defining multiple variables simultaneously
+```python
+>>> a, b, c, d = 1, 'two', [3], 4
+>>> print(a, b, c, d)
+1 two [3] 4
+```
+
+##### Cascading a single object to multiple variables
+```python
+>>> a = b = c = 25
+>>> print(a, b, c)
+25 25 25
+
+>>> d, e, f = [5, 6, 7, 8, 9]
+>>> print(d, e, f)
+[5, 6, 7, 8, 9] [5, 6, 7, 8, 9] [5, 6, 7, 8, 9]
+```
+
+__[Note]__
+Be aware that cascading an object to multiple variable names does not create multiple objects in memory. Instead, all cascaded variable names refer to the same object in memory. This may present a problem if the the object is modified after assignment.
+
+##### Reassigning a cascaded variable after assignment
+```python
+>>> x = y = [1, 2, 3]
+>>> y = [3, 4, 5]
+>>> print(x, y)
+[1, 2, 3] [3, 4, 5]
+```
+Reassigning a different object to a cascaded variable name does not change the object(s) assigned to the other cascaded variable names. However;
+
+##### Modifying a cascaded variable after assignment
+```python
+>>> x = y = [6, 7, 8]
+>>> x[0] = 14
+>>> print(x, y)
+[14, 7, 8] [14, 7, 8]
+```
+
+In this case, because both cascaded variable names `x` and `y` refer to the same object in memory, when that object is *modified* after assignment, the change is reflected in *both* cascaded variable names, despite the fact that the change was only made using one of the objects assigned names.
+
+##### Same letter, different case, separate variables
+```python
+>>> x = 9
+>>> y = X * 5
+NameError: name 'X' is not defined
+```
+
+### Reserved Keywords
+Python has special reserved keywords, such as `int` and `import`, etc. Reserved keywords cannot be used as variable names. The full list of reserved keywords can be displayed with:
 
 ```python
 import keyword
 print(keyword.kwlist)
 ```
 
-
+### Indentation
 
 ## Strings & Console Output [CC]
 
@@ -381,8 +448,8 @@ describe_pet('willie')
 def describe_pet(animal, name=None):
   print("\nI have a " + animal + ".")
   if name:
-    print("Its name is " + name + ".")
-    
+	print("Its name is " + name + ".")
+	
 describe_pet('hamster', 'harry')
 describe_pet('snake')
 ```
@@ -415,7 +482,7 @@ print(musician)
 def build_person(first, last, age=None):
   person = {'first': first, 'last': last}
   if age:
-    person['age'] = age
+	person['age'] = age
   return person
   
 musician = build_person('jimi', 'hendrix', 27)
@@ -432,8 +499,8 @@ You can pass a list as an argument to a function, and the function can work with
 ```python
 def greet_users(names):
   for name in names:
-    msg = "Hello, " + name + "!"
-    print(msg)
+	msg = "Hello, " + name + "!"
+	print(msg)
 
 usernames = ['hannah', 'ty', 'margot']
 greet_users(usernames)
@@ -444,9 +511,9 @@ greet_users(usernames)
 ```python
 def print_models(unprinted, printed):
   while unprinted:
-    current_model = unprinted.pop()
-    print("Printing " + current_model)
-    printed.append(current_model)
+	current_model = unprinted.pop()
+	print("Printing " + current_model)
+	printed.append(current_model)
 
 # Store some unprinted designs, and print each of them.
 unprinted = ['phone case', 'pendant', 'ring']
@@ -462,9 +529,9 @@ print("Printed:", printed)
 ```python
 def print_models(unprinted, printed):
   while unprinted:
-    current_model = unprinted.pop()
-    print("Printing " + current_model)
-    printed.append(current_model)
+	current_model = unprinted.pop()
+	print("Printing " + current_model)
+	printed.append(current_model)
 
 # Store some unprinted designs, and print each of them.
 original = ['phone case', 'pendant', 'ring']
@@ -485,7 +552,7 @@ def make_pizza(size, *toppings):
   print("\nMaking a " + size + " pizza.")
   print("Toppings:")
   for topping in toppings:
-    print("- " + topping)
+	print("- " + topping)
 
 # Make three pizzas with different toppings.
 make_pizza('small', 'pepperoni')
@@ -501,7 +568,7 @@ def build_profile(first, last, **user_info):
   
   # Add any other keys and values.
   for key, value in user_info.items():
-    profile[key] = value
+	profile[key] = value
  
   return profile
   
@@ -522,7 +589,7 @@ def make_pizza(size, *toppings):
   print("\nMaking a " + size + " pizza.")
   print("Toppings:")
   for topping in toppings:
-    print("- " + topping)
+	print("- " + topping)
 ```
 
 ##### Importing an entire module
@@ -961,14 +1028,14 @@ for user_dict in users:
 # Define a list of users, where each user is represented by a dictionary.
 users = [
   {
-    'last': 'fermi',
-    'first': 'enrico',
-    'username': 'efermi',
+	'last': 'fermi',
+	'first': 'enrico',
+	'username': 'efermi',
   },
   {
-    'last': 'curie',
-    'first': 'marie',
-    'username': 'mcurie',
+	'last': 'curie',
+	'first': 'marie',
+	'username': 'mcurie',
   },
 ]
 
@@ -1002,15 +1069,15 @@ You can store a dictionary inside another dictionary. In this case each value as
 
 ```python
 users = {
-    'aeinstein': {
-    'first': 'albert',
-    'last': 'einstein',
-    'location': 'princeton',
+	'aeinstein': {
+	'first': 'albert',
+	'last': 'einstein',
+	'location': 'princeton',
   },
-    'mcurie': {
-    'first': 'marie',
-    'last': 'curie',
-    'location': 'paris',
+	'mcurie': {
+	'first': 'marie',
+	'last': 'curie',
+	'location': 'paris',
   },
 }
 
@@ -1044,7 +1111,7 @@ fav_languages['phil'] = ['python', 'haskell']
 for name, langs in fav_languages.items():
   print(name + ":")
   for lang in langs:
-    print("- " + lang)
+	print("- " + lang)
 ```
 
 ### Generating Dictionaries Using For Loops
@@ -1125,7 +1192,7 @@ message = ""
 while message != "quit":
   message = input(prompt)
   if message != "quit":
-    print(message)
+	print(message)
 ```
 
 ### Using A Flag
@@ -1138,9 +1205,9 @@ active = True
 while active:
   message = input(prompt)
   if message == "quit":
-    active = False
+	active = False
   else:
-    print(message)
+	print(message)
 ```
 
 ### Using `break` To Exit A Loop
@@ -1151,9 +1218,9 @@ prompt += "\nEnter 'quit' when you're done. "
 while True:
   city = imput(prompt)
   if city == "quit":
-    break
+	break
   else:
-    print("I've been to " + city + "!")
+	print("I've been to " + city + "!")
 ```
 
 ### Using `continue` In A Loop
@@ -1167,12 +1234,12 @@ players = []
 while True:
   player = input(prompt)
   if player == 'quit':
-    break
+	break
   elif player in banned_users:
-    print(player + " is banned!")
-    continue
+	print(player + " is banned!")
+	continue
   else:
-    players.append(player)
+	players.append(player)
 ```
 
 ### Avoiding Infinite Loops
@@ -1210,20 +1277,20 @@ Consider how we might model a car. What information would we associate with a ca
 ```python
 class Car():
   def __init__(self, make, model, year):
-    self.make = make
-    self.model = model
-    self.year = year
+	self.make = make
+	self.model = model
+	self.year = year
 
-    # Fuel capacity and level in gallons.
-    self.fuel_capacity = 15
-    self.fuel_level = 0
+	# Fuel capacity and level in gallons.
+	self.fuel_capacity = 15
+	self.fuel_level = 0
 
   def fill_tank(self):
-    self.fuel_level = self.fuel_capacity
-    print("Fuel tank is full.")
+	self.fuel_level = self.fuel_capacity
+	print("Fuel tank is full.")
 
   def drive(self):
-    print("The car is moving.")
+	print("The car is moving.")
 ```
 
 ##### Creating an object from a class
@@ -1264,19 +1331,19 @@ my_new_car.fuel_level = 5
 ```python
 def update_fuel_level(self, new_level):
   if new_level <= self.fuel_capacity:
-    self.fuel_level = new_level
+	self.fuel_level = new_level
   else:
-    print("The tank can't hold that much!")
+	print("The tank can't hold that much!")
 ```
 
 ##### Writing a method to increment an attribute's value
 ```python
 def add_fuel(self, amount):
   if (self.fuel_level + amount <= self.fuel_capacity):
-    self.fuel_level += amount
-    print("Added fuel.")
+	self.fuel_level += amount
+	print("Added fuel.")
   else:
-    print("The tank won't hold that much.")
+	print("The tank won't hold that much.")
 ```
 
 ### Class Inheritance
@@ -1286,13 +1353,13 @@ If the class you're writing is a specialized version of another class, you can u
 ```python
 class ElectricCar(Car):
   def __init__(self, make, model, year):
-    super().__init__(make, model, year)
-    
-    # Attributes specific to electric cars. Battery capacity in kWh.
-    self.battery_size = 70
-    
-    # Charge level in %.
-    self.charge_level = 0
+	super().__init__(make, model, year)
+	
+	# Attributes specific to electric cars. Battery capacity in kWh.
+	self.battery_size = 70
+	
+	# Charge level in %.
+	self.charge_level = 0
 ```
 
 ##### Adding new methods to the child class
@@ -1300,8 +1367,8 @@ class ElectricCar(Car):
 class ElectricCar(Car):
   --snip--
   def charge(self):
-    self.charge_level = 100
-    print("The vehicle is fully charged.")
+	self.charge_level = 100
+	print("The vehicle is fully charged.")
 ```
 
 ##### Using child and parent methods
@@ -1317,7 +1384,7 @@ my_ecar.drive()
 class ElectricCar(Car):
   --snip--
   def fill_tank(self):
-    print("This car has no fuel tank!")
+	print("This car has no fuel tank!")
 ```
 
 ### Instances As Attributes
@@ -1327,15 +1394,15 @@ A class can have objects as attributes. This allows classes to work together to 
 ```python
 class Battery():
   def __init__(self, size=70):
-    # Capacity in kWh, charge level in %.
-    self.size = size
-    self.charge_level = 0
+	# Capacity in kWh, charge level in %.
+	self.size = size
+	self.charge_level = 0
  
   def get_range(self):
-    if self.size == 70:
-      return 240
-    elif self.size == 85:
-      return 270
+	if self.size == 70:
+	  return 240
+	elif self.size == 85:
+	  return 270
 ```
 
 ##### Using an instance as an attribute
@@ -1343,14 +1410,14 @@ class Battery():
 class ElectricCar(Car):
   --snip--
   def __init__(self, make, model, year):
-    super().__init__(make, model, year)
+	super().__init__(make, model, year)
  
-    # Attribute specific to electric cars.
-    self.battery = Battery()
+	# Attribute specific to electric cars.
+	self.battery = Battery()
  
   def charge(self):
-    self.battery.charge_level = 100
-    print("The vehicle is fully charged.")
+	self.battery.charge_level = 100
+	print("The vehicle is fully charged.")
 ```
 
 ##### Using the instance
@@ -1490,11 +1557,11 @@ print("Enter 'q' to quit.")
 while True:
   x = input("\nFirst number: ")
   if x == 'q':
-    break
+	break
   
   y = input("Second number: ")
   if y == 'q':
-    break
+	break
  
  try:
   result = int(x) / int(y)
@@ -1515,15 +1582,15 @@ f_names = ['alice.txt', 'siddhartha.txt',
 for f_name in f_names:
   # Report the length of each file found.
   try:
-    with open(f_name) as f_obj:
-    lines = f_obj.readlines()
+	with open(f_name) as f_obj:
+	lines = f_obj.readlines()
   except FileNotFoundError:
-    # Just move on to the next file.
-    pass
+	# Just move on to the next file.
+	pass
   else:
-    num_lines = len(lines)
-    msg = "{0} has {1} lines.".format(f_name, num_lines)
-    print(msg)
+	num_lines = len(lines)
+	msg = "{0} has {1} lines.".format(f_name, num_lines)
+	print(msg)
  ```
 
 ### Bare Except Blocks
