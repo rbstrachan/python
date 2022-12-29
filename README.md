@@ -287,7 +287,7 @@ Both cascaded variable names `x` and `y` refer to the same object in memory. Whe
 Using `_` before a variable name indicates that the variable is 'useless' and therefore will not be used again in the program.
 ```python
 for _ in range(5):
-  important_func()
+    important_func()
 ```
 
 ### Same letter, different case, separate variable names, separate objects
@@ -378,6 +378,7 @@ You can check multiple conditions at the same time. The `and` operator returns `
 >>> age_1 = 18
 >>> age_0 >= 21 and age_1 >= 21
 False
+
 >>> age_1 = 23
 >>> age_0 >= 21 and age_1 >= 21
 True
